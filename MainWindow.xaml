@@ -30,17 +30,6 @@
                 </StackPanel>
             </Border>
         </StackPanel>
-        <Label Name="moneyLabel" Grid.Row="2" Content="+1" FontSize="65">
-            
-        </Label>
-        <Label Name="moneyPSLabel" Grid.Row="2" Content="+0" HorizontalContentAlignment="Right" FontSize="65">
-
-        </Label>
-        <Button Grid.Row="2" Content="Click" Height="20" Width="200" UseLayoutRounding="True" Click="Button_Click">
-
-        </Button>
-        <Button Grid.Row="2" Content="Buy" HorizontalAlignment="Right" Height="20" Width="200" UseLayoutRounding="True" Click="Button_Click_1">
-
-        </Button>
+        <Frame Name="frame" Grid.Row="1" Margin="0,10,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

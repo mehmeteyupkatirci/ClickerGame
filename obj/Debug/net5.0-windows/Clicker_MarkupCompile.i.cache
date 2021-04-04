@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\User\source\repos\Clicker\App.xaml
-11407045341
+4-1466769462
 
-5781241291
+8-2065406185
 193-1891726104
-MainWindow.xaml;
+MainWindow.xaml;Pages\FirstPage.xaml;Pages\GamePage.xaml;Pages\SettingsPage.xaml;
 
-False
+True
 

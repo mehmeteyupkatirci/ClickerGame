@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clicker.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,15 +22,10 @@ namespace Clicker
     /// </summary>
     public partial class MainWindow : Window
     {
-        public double money;
-        public double mps;
-        private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
-
         public MainWindow()
         {
-            MPSTextUpdate(_cancellationTokenSource.Token);
-            this.Closing += (sender, e) => _cancellationTokenSource.Cancel();
             InitializeComponent();
+            frame.NavigationService.Navigate(new FirstPage());
         }
 
         #region Title Bar
@@ -128,45 +124,10 @@ namespace Clicker
             }
         }
 
-        public async void MPSTextUpdate(CancellationToken cancellationToken)
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                try
-                {
-                    await Task.Delay(1000, cancellationToken);
-                    money += mps;
-                    moneyLabel.Content = ShortNumbersMaker(money);
-                }
-                catch (Exception e)
-                {
-                    if (!cancellationToken.IsCancellationRequested) 
-                    {
-                        Close();
-                        return;
-                    }
-                }
-
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            money += 1;
-            moneyLabel.Content = money;
-            //Random rnd = new Random();
-            //controller.ClickButton();
-            //ClickPointAddLabel.Margin = new Thickness(rnd.Next(0, 150), rnd.Next(0, 150), rnd.Next(0, 150), rnd.Next(0, 150));
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            if (money >= 5)
-            {
-                money -= 5;
-                mps += 1;
-            }
-            moneyPSLabel.Content = mps;
+            //GamePage gamePage = new GamePage();
+            //gamePage.
         }
     }
 }

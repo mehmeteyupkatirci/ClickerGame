@@ -21,3 +21,9 @@ C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\ref\Clicker.dll
 C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Clicker.pdb
 C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Clicker.genruntimeconfig.cache
 C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\App.baml
+C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Pages\FirstPage.g.cs
+C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Pages\GamePage.g.cs
+C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Pages\FirstPage.baml
+C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Pages\GamePage.baml
+C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Pages\SettingsPage.g.cs
+C:\Users\User\source\repos\Clicker\obj\Debug\net5.0-windows\Pages\SettingsPage.baml
