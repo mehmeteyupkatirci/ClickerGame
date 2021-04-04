@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clicker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450" 
+        Width="800"
+        WindowStyle="None">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Panel.ZIndex="1" Orientation="Horizontal" MouseDown="MyTitleBar_MouseDown" Margin="10,0">
+            <!--<Image Source="Images/NarBulut_PNG_Icon_White_V3.png" Margin="0,0,5,0"/> TO-DO: İkon gelecek!-->
+            <TextBlock Text="Clicker Game" FontSize="13" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
+        <StackPanel Name="MyTitleBar" VerticalAlignment="Top" MouseDown="MyTitleBar_MouseDown">
+            <Border Background="#27527B" Height="30">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Name="btnMin" Content="—" Margin="0,-2,0,0" VerticalContentAlignment="Top" FontWeight="Bold" Click="btnMin_Click" Style="{StaticResource TitleButton}" Width="40" ></Button>
+                    <Button Name="btnNormal" Content="❐" Margin="0,-2,0,0" VerticalContentAlignment="Top" Click="btnNormal_Click" Style="{StaticResource TitleButton}" Width="40" ></Button>
+                    <Button Name="btnClose" Content="🗙" Margin="0,-2,0,0" Click="btnClose_Click" Style="{StaticResource TitleButton}" Width="40" ></Button>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <Label Name="moneyLabel" Grid.Row="2" Content="+1" FontSize="65">
+            
+        </Label>
+        <Label Name="moneyPSLabel" Grid.Row="2" Content="+0" HorizontalContentAlignment="Right" FontSize="65">
 
+        </Label>
+        <Button Grid.Row="2" Content="Click" Height="20" Width="200" UseLayoutRounding="True" Click="Button_Click">
+
+        </Button>
+        <Button Grid.Row="2" Content="Buy" HorizontalAlignment="Right" Height="20" Width="200" UseLayoutRounding="True" Click="Button_Click_1">
+
+        </Button>
     </Grid>
 </Window>
