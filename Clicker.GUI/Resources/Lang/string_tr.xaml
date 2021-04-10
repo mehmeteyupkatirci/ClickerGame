@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+
+    <system:String x:Key="appFullName">Clicker Oyunum</system:String>
+    <system:String x:Key="play">Oyna</system:String>
+    <system:String x:Key="settings">Ayarlar</system:String>
+    <system:String x:Key="back2HomePage">Anasayfaya Dön</system:String>
+    <system:String x:Key="buy">Satın Al</system:String>
+    <system:String x:Key="back2HomePageMB">Anasayfaya dönmek istediğinize emin misiniz?</system:String>
+    <system:String x:Key="notEnoughMoney">Satın almak için paranız yetersiz!</system:String>
+</ResourceDictionary>

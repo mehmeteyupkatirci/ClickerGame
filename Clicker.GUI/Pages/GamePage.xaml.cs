@@ -37,7 +37,7 @@ namespace Clicker.GUI.Pages
 
         private void btnFirstPage_Click(object sender, RoutedEventArgs e)
         {
-            var messageBoxResult = MessageBox.Show("Anasayfaya dönmek istediğinize emin misiniz?", "Idle Clicker", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            var messageBoxResult = MessageBox.Show(Resources["back2HomePageMB"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 this.NavigationService.Navigate(new HomePage());
@@ -48,10 +48,10 @@ namespace Clicker.GUI.Pages
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                await Task.Delay(1000);
-                oneProgBar.Value += 1000;
+                await Task.Delay(200);
+                oneProgBar.Value += 200;
                 oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString();
-                if (oneProgBar.Value == oneProgBar.Maximum)
+                if (oneProgBar.Value >= oneProgBar.Maximum)
                 {
                     moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
                     oneProgBar.Value = 0;
@@ -78,12 +78,12 @@ namespace Clicker.GUI.Pages
             {
                 oneUpgradeCountTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) + 1).ToString();
                 moneyTxt.Text = (Convert.ToDouble(moneyTxt.Text) - oneCurrentPrice).ToString();
-                oneBuyButton.Content = $"${oneCurrentPrice} Buy";
                 oneCurrentPrice = Math.Round(oneDefaultMoney * Math.Pow(1.15, Convert.ToDouble(oneUpgradeCountTxt.Text)), 1);
+                oneBuyButton.Content = $"${oneCurrentPrice} {Resources["buy"]}";
             }
             else
             {
-                MessageBox.Show("Yetersiz para");
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK , MessageBoxImage.Error);
             }
         }
     }

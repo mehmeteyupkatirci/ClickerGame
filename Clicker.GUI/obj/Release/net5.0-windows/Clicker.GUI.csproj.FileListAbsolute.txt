@@ -27,3 +27,5 @@ C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\net5.0-windows\Clicke
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\net5.0-windows\ref\Clicker.GUI.dll
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\net5.0-windows\Clicker.GUI.pdb
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\net5.0-windows\Clicker.GUI.genruntimeconfig.cache
+C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\net5.0-windows\Resources\Lang\string_eng.baml
+C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\net5.0-windows\Resources\Lang\string_tr.baml
