@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clicker", "Clicker.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clicker.Core", "..\Clicker.Core\Clicker.Core.csproj", "{F017A9E4-3E26-40E8-B2EA-57BFF0B2D329}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clicker.DataAccess", "..\Clicker.DataAccess\Clicker.DataAccess.csproj", "{90FBDDCE-8A05-4DEA-90FC-8432392E8607}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F017A9E4-3E26-40E8-B2EA-57BFF0B2D329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F017A9E4-3E26-40E8-B2EA-57BFF0B2D329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F017A9E4-3E26-40E8-B2EA-57BFF0B2D329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FBDDCE-8A05-4DEA-90FC-8432392E8607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FBDDCE-8A05-4DEA-90FC-8432392E8607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FBDDCE-8A05-4DEA-90FC-8432392E8607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FBDDCE-8A05-4DEA-90FC-8432392E8607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
