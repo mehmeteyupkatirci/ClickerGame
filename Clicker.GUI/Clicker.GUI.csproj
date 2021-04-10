@@ -154,6 +154,16 @@
     <Resource Include="Resources\Icons\icons8-settings-24.png" />
     <Resource Include="Resources\Icons\icons8_user_2.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clicker.Core\Clicker.Core.csproj">
+      <Project>{82cc3469-e325-484d-9e17-9ca41486c7bd}</Project>
+      <Name>Clicker.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Clicker.Entities\Clicker.Entities.csproj">
+      <Project>{acede479-0711-466f-b209-700ec7b62ee9}</Project>
+      <Name>Clicker.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

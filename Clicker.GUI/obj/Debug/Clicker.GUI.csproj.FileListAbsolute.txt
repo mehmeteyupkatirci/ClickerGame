@@ -33,6 +33,8 @@ C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\EntityFramework.SqlServ
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\System.Data.SQLite.xml
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Clicker.GUI_Content.g.cs
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Clicker.GUI.csproj.CopyComplete
+C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\System.Data.SqlClient.dll
+C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\System.Data.SqlClient.xml
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Core.dll
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.DataAccess.dll
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Entities.dll
@@ -41,5 +43,3 @@ C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Core.dll.config
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.DataAccess.pdb
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.DataAccess.dll.config
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Entities.pdb
-C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\System.Data.SqlClient.dll
-C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\System.Data.SqlClient.xml
