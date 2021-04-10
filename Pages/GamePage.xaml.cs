@@ -23,6 +23,7 @@ namespace Clicker
     public partial class GamePage : Page
     {
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+        private double money = 0;
         private double oneDefaultMoney = 5;
         private double oneCurrentPrice = 10;
 
@@ -31,7 +32,7 @@ namespace Clicker
             InitializeComponent();
             oneUpgradeCountTxt.Text = 1.ToString();
             RefreshFirstProgress(_cancellationTokenSource.Token);
-            moneyTxt.Text = 0.ToString();
+            moneyTxt.Text = money.ToString();
             oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString(); 
         }
 
