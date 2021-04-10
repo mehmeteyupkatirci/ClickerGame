@@ -24,5 +24,9 @@ namespace Clicker.GUI.Pages
         {
             InitializeComponent();
         }
+        private void btnFirstPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HomePage());
+        }
     }
 }
