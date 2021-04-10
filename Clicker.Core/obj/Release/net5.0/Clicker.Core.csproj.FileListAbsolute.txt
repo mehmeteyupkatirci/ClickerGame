@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\Clicker\Clicker.Core\bin\Release\net5.0\Clicker.Core.deps.json
+C:\Users\User\source\repos\Clicker\Clicker.Core\bin\Release\net5.0\Clicker.Core.runtimeconfig.json
+C:\Users\User\source\repos\Clicker\Clicker.Core\bin\Release\net5.0\Clicker.Core.runtimeconfig.dev.json
+C:\Users\User\source\repos\Clicker\Clicker.Core\bin\Release\net5.0\Clicker.Core.dll
+C:\Users\User\source\repos\Clicker\Clicker.Core\bin\Release\net5.0\ref\Clicker.Core.dll
+C:\Users\User\source\repos\Clicker\Clicker.Core\bin\Release\net5.0\Clicker.Core.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.AssemblyInfo.cs
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.dll
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\ref\Clicker.Core.dll
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Core\obj\Release\net5.0\Clicker.Core.genruntimeconfig.cache

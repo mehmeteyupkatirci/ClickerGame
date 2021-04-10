@@ -25,11 +25,9 @@
         </Grid.RowDefinitions>
         <TextBlock Foreground="#F2F2F2" Name="moneyTxt" Text="MONEY" Margin="30,10,10,10" FontSize="40"/>
         <TextBlock Foreground="#F2F2F2" Text="$" Margin="10" FontSize="40"/>
-        <Button Name="btnFirstPage" Background="#240246" Grid.ColumnSpan="2" VerticalAlignment="Top" ToolTip="{DynamicResource back2HomePage}"  HorizontalAlignment="Right" Click="btnFirstPage_Click">
-        <Button.Content>
-                <StackPanel Orientation="Horizontal">
-                    <Image Height="46" Width="46" Source="../Resources/Icons/icons8-home-50.png"></Image>
-                </StackPanel>
+        <Button Name="btnFirstPage" Background="#240246" Grid.ColumnSpan="2" BorderThickness="0" VerticalAlignment="Top" ToolTip="{DynamicResource back2HomePage}"  HorizontalAlignment="Right" Click="btnFirstPage_Click">
+            <Button.Content>
+                <Image Height="46" Width="46" Source="../Resources/Icons/icons8-home-50.png"/>
             </Button.Content>
         </Button>
         <!--#region Left-->

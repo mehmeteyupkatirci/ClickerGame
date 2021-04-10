@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Clicker.DataAccess.Abstract;
+using Clicker.DataAccess.Concrete.EntityFramework;
+using Clicker.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,11 +49,19 @@ namespace Clicker.GUI.Pages
 
         public async void RefreshFirstProgress(CancellationToken cancellationToken)
         {
+            EfImprovement efImprovement = new EfImprovement();
+            var result = efImprovement.Get(x=> x.Id == "first");
             while (!cancellationToken.IsCancellationRequested)
             {
                 await Task.Delay(200);
                 oneProgBar.Value += 200;
                 oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString();
+                
+                if (!(Convert.ToDouble(moneyTxt.Text) >= oneCurrentPrice))
+                    oneBuyButton.IsEnabled = false;
+                else
+                    oneBuyButton.IsEnabled = true;
+
                 if (oneProgBar.Value >= oneProgBar.Maximum)
                 {
                     moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();

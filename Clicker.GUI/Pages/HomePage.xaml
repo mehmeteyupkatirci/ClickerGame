@@ -12,7 +12,9 @@
     </Page.Resources>
 
     <Grid Background="#240246">
-        <Button Name="btnPlay" Click="btnPlay_Click" Content="{DynamicResource play}" HorizontalAlignment="Center" Margin="0,136,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" Width="176"/>
-        <Button Name="btnSettings" Click="btnSettings_Click" Content="{DynamicResource settings}" HorizontalAlignment="Center" Margin="0,195,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" Width="176"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Name="btnPlay" Click="btnPlay_Click" Content="{DynamicResource play}" Height="36" Width="176" Margin="20"/>
+            <Button Name="btnSettings" Click="btnSettings_Click" Content="{DynamicResource settings}" Height="36" Width="176" Margin="20"/>
+        </StackPanel>
     </Grid>
 </Page>
