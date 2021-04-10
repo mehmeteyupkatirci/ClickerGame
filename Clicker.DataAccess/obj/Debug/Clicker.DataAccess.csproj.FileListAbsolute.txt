@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.DataAccess.dll.config
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.DataAccess.dll
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.DataAccess.pdb
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.Core.dll
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.Entities.dll
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.Core.pdb
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.Core.dll.config
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\Clicker.Entities.pdb
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\obj\Debug\Clicker.DataAccess.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\obj\Debug\Clicker.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\obj\Debug\Clicker.DataAccess.csproj.CopyComplete
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\obj\Debug\Clicker.DataAccess.dll
+C:\Users\User\source\repos\Clicker\Clicker.DataAccess\obj\Debug\Clicker.DataAccess.pdb

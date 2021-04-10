@@ -1,7 +1,4 @@
-﻿using Clicker.DataAccess.Abstract;
-using Clicker.DataAccess.Concrete.EntityFramework;
-using Clicker.Entities.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Clicker.GUI.Pages
 {
-    /// <summary>
-    /// Interaction logic for GamePage.xaml
-    /// </summary>
     public partial class GamePage : Page
     {
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
@@ -49,8 +43,6 @@ namespace Clicker.GUI.Pages
 
         public async void RefreshFirstProgress(CancellationToken cancellationToken)
         {
-            EfImprovement efImprovement = new EfImprovement();
-            var result = efImprovement.Get(x=> x.Id == "first");
             while (!cancellationToken.IsCancellationRequested)
             {
                 await Task.Delay(200);
