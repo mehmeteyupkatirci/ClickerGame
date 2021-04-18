@@ -37,7 +37,7 @@ namespace Clicker.GUI
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             GamePage gamePage = new GamePage();
-            gamePage.SetDb2LastChanges();
+            gamePage.SetGameFromDb();
             Close();
         }
 

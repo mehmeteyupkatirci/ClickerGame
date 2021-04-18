@@ -51,9 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IConfigurationDataDal.cs" />
     <Compile Include="Abstract\IImprovementDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfConfigurationDataDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfImprovement.cs" />
     <Compile Include="Concrete\EntityFramework\IdleClickerContext.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ConfigurationDataMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ImprovementMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

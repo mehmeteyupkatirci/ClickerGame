@@ -16,7 +16,6 @@ namespace Clicker.DataAccess.Concrete.EntityFramework.Mappings
             HasKey(x => x.Id);
 
             Property(x => x.Id).HasColumnName("improvement_id");
-            Property(x => x.StartPrice).HasColumnName("start_price");
             Property(x => x.CurrentPrice).HasColumnName("current_price");
             Property(x => x.TimeMs).HasColumnName("time_ms");
             Property(x => x.UpgradeCount).HasColumnName("upgrade_count");

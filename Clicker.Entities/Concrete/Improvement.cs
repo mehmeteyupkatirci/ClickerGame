@@ -10,7 +10,6 @@ namespace Clicker.Entities.Concrete
     public class Improvement : IEntity
     {
         public string Id { get; set; }
-        public double StartPrice { get; set; }
         public double CurrentPrice { get; set; }
         public int TimeMs { get; set; }
         public int UpgradeCount { get; set; }

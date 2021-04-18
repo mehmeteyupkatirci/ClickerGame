@@ -155,13 +155,9 @@
     <Resource Include="Resources\Icons\icons8_user_2.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clicker.Core\Clicker.Core.csproj">
-      <Project>{82cc3469-e325-484d-9e17-9ca41486c7bd}</Project>
-      <Name>Clicker.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Clicker.DataAccess\Clicker.DataAccess.csproj">
-      <Project>{57668050-7CA0-4493-AE05-84763A90CB59}</Project>
-      <Name>Clicker.DataAccess</Name>
+    <ProjectReference Include="..\Clicker.Business\Clicker.Business.csproj">
+      <Project>{bc3db611-aae1-4417-9a73-22e14442f0b4}</Project>
+      <Name>Clicker.Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\Clicker.Entities\Clicker.Entities.csproj">
       <Project>{acede479-0711-466f-b209-700ec7b62ee9}</Project>

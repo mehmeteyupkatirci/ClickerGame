@@ -44,10 +44,10 @@
                     </StackPanel>
 
                     <TextBlock Name="oneUpgradeCountTxt" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Name="oneProgBar" Background="#AA9AB9" MouseDoubleClick="oneProgBar_MouseDoubleClick" Grid.Column="2" Minimum="0" Maximum="5000" Value="0" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <ProgressBar Name="oneProgBar" Background="#AA9AB9" MouseDoubleClick="oneProgBar_MouseDoubleClick" Grid.Column="2" Minimum="0" Value="0" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="oneMoneyTxt" Foreground="#F2F2F2" Text="200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="oneBuyButton" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="oneBuyButton_Click"/>
-                    <TextBlock Foreground="#F2F2F2" Name="oneDurationTxt" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:05" FontSize="18"/>
+                    <TextBlock Name="oneDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:05" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -62,11 +62,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="twoUpgradeCountTxt" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="twoProgBar" MouseDoubleClick="twoProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="twoMoneyTxt" Foreground="#F2F2F2" Text="200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="twoBuyButton" Click="twoBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="twoDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:08" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>

@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Business.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Business.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Core.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.DataAccess.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Entities.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Core.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Core.dll.config
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.DataAccess.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.DataAccess.dll.config
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Entities.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.csproj.CopyComplete
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.pdb

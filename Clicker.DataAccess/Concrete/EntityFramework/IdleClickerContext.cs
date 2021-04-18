@@ -17,10 +17,12 @@ namespace Clicker.DataAccess.Concrete.EntityFramework
         }
 
         public DbSet<Improvement> Improvements { get; set; }
+        public DbSet<ConfigurationData> ConfigurationDatas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ImprovementMap());
+            modelBuilder.Configurations.Add(new ConfigurationDataMap());
         }
     }
 }
