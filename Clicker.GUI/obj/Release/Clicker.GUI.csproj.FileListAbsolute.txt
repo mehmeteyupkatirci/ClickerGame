@@ -40,3 +40,6 @@ C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\Clicker.GUI.csproj.Co
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\Clicker.GUI.csproj.CopyComplete
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\Clicker.GUI.exe
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\Clicker.GUI.pdb
+C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.DataAccess.dll
+C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.DataAccess.pdb
+C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.DataAccess.dll.config

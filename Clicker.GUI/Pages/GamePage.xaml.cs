@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Clicker.DataAccess.Abstract;
+using Clicker.DataAccess.Concrete.EntityFramework;
+using Clicker.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,26 +22,51 @@ namespace Clicker.GUI.Pages
     public partial class GamePage : Page
     {
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
-        private double money = 0;
+        EfImprovement _improvementDal = new EfImprovement();
+
+        private double money = 20;
         private double oneDefaultMoney = 5;
         private double oneCurrentPrice = 10;
 
         public GamePage()
         {
             InitializeComponent();
-            oneUpgradeCountTxt.Text = 1.ToString();
+
+            FirstGetUserData();
+            //oneUpgradeCountTxt.Text = 1.ToString();
             RefreshFirstProgress(_cancellationTokenSource.Token);
             moneyTxt.Text = money.ToString();
+        }
+
+        private void FirstGetUserData()
+        {
+            //Improvement ımprovement = new Improvement() {Id = "test", StartPrice = 2, CurrentPrice = 1, Manager = true, TimeMs = 20, UpgradeCount = 23};
+            //_improvementDal.Add(ımprovement);
+            var improvement = _improvementDal.Get(x => x.Id == "first");
+            oneUpgradeCountTxt.Text = improvement.UpgradeCount.ToString();
+            oneCurrentPrice = improvement.CurrentPrice;
+            oneDefaultMoney = improvement.StartPrice;
+            oneProgBar.Maximum = improvement.TimeMs * 1000;
+            oneDurationTxt.Text = $"00:00:0{improvement.TimeMs}";
             oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString();
         }
 
         private void btnFirstPage_Click(object sender, RoutedEventArgs e)
         {
             var messageBoxResult = MessageBox.Show(Resources["back2HomePageMB"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.YesNo, MessageBoxImage.Question);
+            SetDb2LastChanges();
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 this.NavigationService.Navigate(new HomePage());
             }
+        }
+
+        public void SetDb2LastChanges()
+        {
+            var improvement = _improvementDal.Get(x => x.Id == "first");
+            improvement.CurrentPrice = oneCurrentPrice;
+            improvement.UpgradeCount = Convert.ToInt32(oneUpgradeCountTxt.Text);
+            _improvementDal.Update(improvement);
         }
 
         public async void RefreshFirstProgress(CancellationToken cancellationToken)

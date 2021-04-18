@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clicker.Entities", "Clicker
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clicker.DataAccess", "Clicker.DataAccess\Clicker.DataAccess.csproj", "{57668050-7CA0-4493-AE05-84763A90CB59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clicker.Business", "Clicker.Business\Clicker.Business.csproj", "{BC3DB611-AAE1-4417-9A73-22E14442F0B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{57668050-7CA0-4493-AE05-84763A90CB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57668050-7CA0-4493-AE05-84763A90CB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57668050-7CA0-4493-AE05-84763A90CB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3DB611-AAE1-4417-9A73-22E14442F0B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3DB611-AAE1-4417-9A73-22E14442F0B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3DB611-AAE1-4417-9A73-22E14442F0B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3DB611-AAE1-4417-9A73-22E14442F0B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
