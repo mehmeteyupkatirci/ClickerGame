@@ -16,16 +16,16 @@ namespace Clicker.GUI.Pages
 
         private double money = 20;
 
-        private double oneDefaultMoney = 5;
+        private double oneDefaultMoney = 1;
         private double oneCurrentPrice = 10;
 
-        private double twoDefaultMoney = 50;
+        private double twoDefaultMoney = 5;
         private double twoCurrentPrice = 500;
 
         public GamePage()
         {
             InitializeComponent();
-            
+
             SetGameFromDb();
             RefreshOneProgress(_cancellationTokenSource.Token);
             RefreshTwoProgress(_cancellationTokenSource.Token);
@@ -43,7 +43,7 @@ namespace Clicker.GUI.Pages
         }
 
         ///<summary>
-        ///Database'de bulunan tabloda(improvements) oyun için gerekli olan tüm bilgileri günceller. 
+        ///Database içerisinde oyun için gerekli olan tüm bilgileri günceller. Oyunu kapatırken ya da önceki menüye dönmek istenildiğinde kullanılır.
         ///</summary>
         public void SetGameFromDb(bool isUpdate)
         {
@@ -51,7 +51,7 @@ namespace Clicker.GUI.Pages
         }
 
         ///<summary>
-        ///Database'den oyun için gerekli olan tüm bilgileri getirir. Bu bilgiler sayesinde oyunda kullanılacak olan ve en son kayıt edilmiş bilgiler getirilir.
+        ///Database'den oyun için gerekli olan tüm bilgileri getirir. Bu bilgiler sayesinde oyunda kullanılacak olan ve en son kayıt edilmiş bilgiler getirilir. Oyun ekranının constructor'ında çağırılması yeterlidir.
         ///</summary>
         public void SetGameFromDb()
         {
@@ -68,8 +68,8 @@ namespace Clicker.GUI.Pages
             oneProgBar.Maximum = improvement.TimeMs * 1000;
             oneDurationTxt.Text = $"00:00:0{improvement.TimeMs}";
             oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString();
-
             twoProgBar.Maximum = 10000;
+            twoUpgradeCountTxt.Text = 3.ToString();
         }
 
         private void OneSetImprovement()

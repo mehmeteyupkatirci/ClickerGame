@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Clicker.DataAccess.Concrete.EntityFramework
 {
-    public class EfImprovement: EfEntityRepositoryBase<Improvement, IdleClickerContext> , IImprovementDal
+    public class EfImprovementDal: EfEntityRepositoryBase<Improvement, IdleClickerContext> , IImprovementDal
     {
     }
 }

@@ -9,6 +9,7 @@ namespace Clicker.Business.Abstract
 {
     public interface IImprovementService
     {
+        bool InitConfiguration();
         List<Improvement> ImprovementList();
         Improvement GetImprovement(string improvementId);
         bool UpdateImprovement(Improvement improvement);

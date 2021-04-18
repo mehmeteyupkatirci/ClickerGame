@@ -1,4 +1,5 @@
-﻿using Clicker.GUI.Pages;
+﻿using Clicker.Business.Concrete;
+using Clicker.GUI.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,16 @@ namespace Clicker.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        ImprovementService _improvementService = new ImprovementService();
+        
         public MainWindow()
         {
             InitializeComponent();
+            var init = _improvementService.InitConfiguration();
+            if (init)
+            {
+                MessageBox.Show("İlk kurulum yapılıyor");
+            }
             frame.NavigationService.Navigate(new HomePage());
         }
 
@@ -125,10 +133,5 @@ namespace Clicker.GUI
             }
         }
 
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
-        {
-            //GamePage gamePage = new GamePage();
-            //gamePage.
-        }
     }
 }
