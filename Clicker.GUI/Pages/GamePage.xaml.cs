@@ -14,21 +14,13 @@ namespace Clicker.GUI.Pages
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         ImprovementService _improvementService = new ImprovementService();
 
+        private Improvement one, two, three, four, five, six, seven, eight, nine, ten;
 
         private double money = 0;
-        private double oneDefaultMoney, oneCurrentPrice, twoDefaultMoney, twoCurrentPrice;
 
         public GamePage()
         {
             InitializeComponent();
-
-            var one = _improvementService.GetImprovement("one");
-            oneDefaultMoney = one.DefaultMoney;
-            oneCurrentPrice = one.CurrentPrice;
-
-            var two = _improvementService.GetImprovement("two");
-            twoDefaultMoney = two.DefaultMoney;
-            twoCurrentPrice = two.CurrentPrice;
 
             GetGameDataFromDb();
             RefreshOneProgress(_cancellationTokenSource.Token);
@@ -46,6 +38,122 @@ namespace Clicker.GUI.Pages
             }
         }
 
+        public async void RefreshOneProgress(CancellationToken cancellationToken)
+        {
+
+            while (true)
+            {
+                await Task.Delay(200);
+                oneProgBar.Value += 200;
+                oneMoneyTxt.Text = (Convert.ToDouble(one.UpgradeCount) * one.DefaultMoney).ToString();
+
+                if (!(Convert.ToDouble(moneyTxt.Text) >= one.CurrentPrice))
+                    oneBuyButton.IsEnabled = false;
+                else
+                    oneBuyButton.IsEnabled = true;
+
+                if (oneProgBar.Value >= oneProgBar.Maximum)
+                {
+                    moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
+                    if (one.Manager == true)
+                    {
+                        oneProgBar.Value = 0;
+                    }
+                }
+            }
+        }
+        public async void RefreshTwoProgress(CancellationToken cancellationToken)
+        {
+            if (two.Manager == true)
+            {
+                while (!cancellationToken.IsCancellationRequested)
+                {
+                    await Task.Delay(200);
+                    twoProgBar.Value += 200;
+                    twoMoneyTxt.Text = (Convert.ToDouble(twoUpgradeCountTxt.Text) * two.DefaultMoney).ToString();
+
+                    if (!(Convert.ToDouble(moneyTxt.Text) >= two.CurrentPrice))
+                        twoBuyButton.IsEnabled = false;
+                    else
+                        twoBuyButton.IsEnabled = true;
+
+                    if (twoProgBar.Value >= twoProgBar.Maximum)
+                    {
+                        moneyTxt.Text = (Convert.ToDouble(twoMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
+                        twoProgBar.Value = 0;
+                    }
+                }
+            }
+        }
+
+        private void oneProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (oneProgBar.Value == (one.TimeMs * 1000))
+            {
+                money = (one.UpgradeCount * one.DefaultMoney) + money;
+                moneyTxt.Text = money.ToString();
+                oneProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Daha dolmadı!");
+            }
+        }
+
+        private void oneBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (money >= one.CurrentPrice)
+            {
+                one.UpgradeCount += 1;
+                money = money - one.CurrentPrice;
+                one.CurrentPrice *= 1.21;
+                ChangeOneProperties();
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void ChangeOneProperties()
+        {
+            oneUpgradeCountTxt.Text = one.UpgradeCount.ToString();
+            oneMoneyTxt.Text = (one.UpgradeCount * one.DefaultMoney).ToString();
+            oneBuyButton.Content = $"${one.CurrentPrice} {Resources["buy"]}";
+            oneProgBar.Maximum = one.TimeMs * 1000;
+            oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
+            moneyTxt.Text = money.ToString();
+        }
+
+        private void twoProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (twoProgBar.Value == twoProgBar.Maximum)
+            {
+                moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
+                oneProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("!");
+            }
+        }
+
+        private void twoBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Convert.ToDouble(moneyTxt.Text) >= two.CurrentPrice)
+            {
+                twoUpgradeCountTxt.Text = (Convert.ToDouble(twoUpgradeCountTxt.Text) + 1).ToString();
+                moneyTxt.Text = (Convert.ToDouble(moneyTxt.Text) - two.CurrentPrice).ToString();
+                two.CurrentPrice = Math.Round(two.DefaultMoney * Math.Pow(1.15, Convert.ToDouble(twoUpgradeCountTxt.Text)), 1);
+                twoBuyButton.Content = $"${two.CurrentPrice} {Resources["buy"]}";
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        #region DBOperations
         ///<summary>
         ///Database içerisinde oyun için gerekli olan tüm bilgileri günceller. Oyunu kapatırken ya da önceki menüye dönmek istenildiğinde kullanılır.
         ///</summary>
@@ -68,136 +176,29 @@ namespace Clicker.GUI.Pages
         {
             //Improvement ımprovement = new Improvement() {Id = "test", StartPrice = 2, CurrentPrice = 1, Manager = true, TimeMs = 20, UpgradeCount = 23};
             //_improvementService.Add(ımprovement);
-            var improvement = _improvementService.GetImprovement("one");
-            oneUpgradeCountTxt.Text = improvement.UpgradeCount.ToString();
-            oneCurrentPrice = improvement.CurrentPrice;
-            oneProgBar.Maximum = improvement.TimeMs * 1000;
-            oneDurationTxt.Text = $"00:00:0{improvement.TimeMs}";
-            oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString();
+            one = _improvementService.GetImprovement("one");
+            ChangeOneProperties();
         }
 
         private void TwoGetImprovement()
         {
-            var improvement = _improvementService.GetImprovement("two");
-            twoUpgradeCountTxt.Text = improvement.UpgradeCount.ToString();
-            twoCurrentPrice = improvement.CurrentPrice;
-            twoProgBar.Maximum = improvement.TimeMs * 1000;
-            twoDurationTxt.Text = $"00:00:0{improvement.TimeMs}";
-            twoMoneyTxt.Text = (Convert.ToDouble(twoUpgradeCountTxt.Text) * twoDefaultMoney).ToString();
+            two = _improvementService.GetImprovement("two");
+            twoUpgradeCountTxt.Text = two.UpgradeCount.ToString();
+            twoProgBar.Maximum = two.TimeMs * 1000;
+            twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
+            twoMoneyTxt.Text = (Convert.ToDouble(two.UpgradeCount) * two.DefaultMoney).ToString();
         }
 
 
         private void OneSetImprovement()
         {
-            var one = _improvementService.GetImprovement("one");
-            one.CurrentPrice = oneCurrentPrice;
-            one.UpgradeCount = Convert.ToInt32(oneUpgradeCountTxt.Text);
             _improvementService.UpdateImprovement(one);
         }
 
         private void TwoSetImprovement()
         {
-            var two = _improvementService.GetImprovement("two");
-            two.CurrentPrice = twoCurrentPrice;
-            two.UpgradeCount = Convert.ToInt32(twoUpgradeCountTxt.Text);
             _improvementService.UpdateImprovement(two);
         }
-
-        public async void RefreshOneProgress(CancellationToken cancellationToken)
-        {
-            while (true)
-            {
-                await Task.Delay(200);
-                oneProgBar.Value += 200;
-                oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString();
-                
-                if (!(Convert.ToDouble(moneyTxt.Text) >= oneCurrentPrice))
-                    oneBuyButton.IsEnabled = false;
-                else
-                    oneBuyButton.IsEnabled = true;
-
-                if (oneProgBar.Value >= oneProgBar.Maximum)
-                {
-                    moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
-                    oneProgBar.Value = 0;
-                }
-            }
-        }
-        public async void RefreshTwoProgress(CancellationToken cancellationToken)
-        {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                await Task.Delay(200);
-                twoProgBar.Value += 200;
-                twoMoneyTxt.Text = (Convert.ToDouble(twoUpgradeCountTxt.Text) * twoDefaultMoney).ToString();
-
-                if (!(Convert.ToDouble(moneyTxt.Text) >= twoCurrentPrice))
-                    twoBuyButton.IsEnabled = false;
-                else
-                    twoBuyButton.IsEnabled = true;
-
-                if (twoProgBar.Value >= twoProgBar.Maximum)
-                {
-                    moneyTxt.Text = (Convert.ToDouble(twoMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
-                    twoProgBar.Value = 0;
-                }
-            }
-        }
-
-        private void oneProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (oneProgBar.Value == oneProgBar.Maximum)
-            {
-                moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
-                oneProgBar.Value = 0;
-            }
-            else
-            {
-                MessageBox.Show("!");
-            }
-        }
-
-        private void oneBuyButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToDouble(moneyTxt.Text) >= oneCurrentPrice)
-            {
-                oneUpgradeCountTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) + 1).ToString();
-                moneyTxt.Text = (Convert.ToDouble(moneyTxt.Text) - oneCurrentPrice).ToString();
-                oneCurrentPrice = Math.Round(oneDefaultMoney * Math.Pow(1.15, Convert.ToDouble(oneUpgradeCountTxt.Text)), 1);
-                oneBuyButton.Content = $"${oneCurrentPrice} {Resources["buy"]}";
-            }
-            else
-            {
-                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK , MessageBoxImage.Error);
-            }
-        }
-
-        private void twoProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (twoProgBar.Value == twoProgBar.Maximum)
-            {
-                moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
-                oneProgBar.Value = 0;
-            }
-            else
-            {
-                MessageBox.Show("!");
-            }
-        }
-
-        private void twoBuyButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToDouble(moneyTxt.Text) >= twoCurrentPrice)
-            {
-                twoUpgradeCountTxt.Text = (Convert.ToDouble(twoUpgradeCountTxt.Text) + 1).ToString();
-                moneyTxt.Text = (Convert.ToDouble(moneyTxt.Text) - twoCurrentPrice).ToString();
-                twoCurrentPrice = Math.Round(twoDefaultMoney * Math.Pow(1.15, Convert.ToDouble(twoUpgradeCountTxt.Text)), 1);
-                twoBuyButton.Content = $"${twoCurrentPrice} {Resources["buy"]}";
-            }
-            else
-            {
-                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
+        #endregion
     }
 }
