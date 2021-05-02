@@ -151,36 +151,99 @@ namespace Clicker.GUI.Pages
 
         private void fourProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            if (fourProgBar.Value == (three.TimeMs * 1000))
+            {
+                money = (four.UpgradeCount * four.DefaultMoney) + money;
+                MoneyWriter();
+                fourProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
         }
 
         private void fiveProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            if (fiveProgBar.Value == (five.TimeMs * 1000))
+            {
+                money = (five.UpgradeCount * five.DefaultMoney) + money;
+                MoneyWriter();
+                fiveProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
         }
 
         private void sixProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            if (sixProgBar.Value == (six.TimeMs * 1000))
+            {
+                money = (six.UpgradeCount * six.DefaultMoney) + money;
+                MoneyWriter();
+                sixProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
         }       
 
         private void sevenProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            if (sevenProgBar.Value == (seven.TimeMs * 1000))
+            {
+                money = (seven.UpgradeCount * seven.DefaultMoney) + money;
+                MoneyWriter();
+                sevenProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
         }
         private void eightProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            if (eightProgBar.Value == (eight.TimeMs * 1000))
+            {
+                money = (eight.UpgradeCount * eight.DefaultMoney) + money;
+                MoneyWriter();
+                eightProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
         }
 
         private void nineProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            if (nineProgBar.Value == (nine.TimeMs * 1000))
+            {
+                money = (nine.UpgradeCount * nine.DefaultMoney) + money;
+                MoneyWriter();
+                nineProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
         }
 
         private void tenProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            if (tenProgBar.Value == (ten.TimeMs * 1000))
+            {
+                money = (ten.UpgradeCount * ten.DefaultMoney) + money;
+                MoneyWriter();
+                tenProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
         }
 
       
@@ -238,40 +301,117 @@ namespace Clicker.GUI.Pages
 
         private void fourBuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (money >= four.CurrentPrice)
+            {
+                four.UpgradeCount += 1;
+                money = money - four.CurrentPrice;
+                four.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("four");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         private void fiveBuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (money >= five.CurrentPrice)
+            {
+                five.UpgradeCount += 1;
+                money = money - five.CurrentPrice;
+                five.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("five");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void sixBuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (money >= six.CurrentPrice)
+            {
+                six.UpgradeCount += 1;
+                money = money - six.CurrentPrice;
+                six.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("six");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
         private void sevenBuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (money >= seven.CurrentPrice)
+            {
+                seven.UpgradeCount += 1;
+                money = money - seven.CurrentPrice;
+                seven.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("seven");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
         private void eightBuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (money >= eight.CurrentPrice)
+            {
+                eight.UpgradeCount += 1;
+                money = money - eight.CurrentPrice;
+                eight.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("eight");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
         private void nineBuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (money >= nine.CurrentPrice)
+            {
+                nine.UpgradeCount += 1;
+                money = money - nine.CurrentPrice;
+                nine.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("nine");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
         private void tenBuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (money >= ten.CurrentPrice)
+            {
+                ten.UpgradeCount += 1;
+                money = money - ten.CurrentPrice;
+                ten.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("ten");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         #endregion
 
@@ -343,62 +483,132 @@ namespace Clicker.GUI.Pages
         private void ChangeProperties(string number)
         {
             if (number == "all")
-            {   //1
-                oneUpgradeCountTxt.Text = one.UpgradeCount.ToString();
-                oneMoneyTxt.Text = Math.Round((one.UpgradeCount * one.DefaultMoney), 1).ToString();
-                oneBuyButton.Content = $"${Math.Round(one.CurrentPrice, 1)} {Resources["buy"]}";
-                oneProgBar.Maximum = one.TimeMs * 1000;
-                oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
-                //2
-                twoUpgradeCountTxt.Text = two.UpgradeCount.ToString();
-                twoMoneyTxt.Text = Math.Round((two.UpgradeCount * two.DefaultMoney), 1).ToString();
-                twoBuyButton.Content = $"${Math.Round(two.CurrentPrice, 1)} {Resources["buy"]}";
-                twoProgBar.Maximum = two.TimeMs * 1000;
-                twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
-                //3
-                threeUpgradeCountTxt.Text = three.UpgradeCount.ToString();
-                threeMoneyTxt.Text = Math.Round((three.UpgradeCount * three.DefaultMoney), 1).ToString();
-                threeBuyButton.Content = $"${Math.Round(three.CurrentPrice, 1)} {Resources["buy"]}";
-                threeProgBar.Maximum = three.TimeMs * 1000;
-                threeDurationTxt.Text = $"00:00:0{three.TimeMs}";
-                //4
-
-                //5
-
-                //6
-
-                //7
-
-                //8
-
-                //9
-
-                //10
+            {
+                ChangePropOne();
+                ChangePropTwo();
+                ChangePropThree();
+                ChangePropFour();
+                ChangePropFive();
+                ChangePropSix();
+                ChangePropSeven();
+                ChangePropEight();
+                ChangePropNine();
+                ChangePropTen();
             }
             else if (number == "one")
-            {
-                oneUpgradeCountTxt.Text = one.UpgradeCount.ToString();
-                oneMoneyTxt.Text = Math.Round((one.UpgradeCount * one.DefaultMoney), 1).ToString();
-                oneBuyButton.Content = $"${Math.Round(one.CurrentPrice, 1)} {Resources["buy"]}";
-                oneProgBar.Maximum = one.TimeMs * 1000;
-                oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
-            }
+                ChangePropOne();
             else if (number == "two")
-            {
-                twoUpgradeCountTxt.Text = two.UpgradeCount.ToString();
-                twoMoneyTxt.Text = Math.Round((two.UpgradeCount * two.DefaultMoney), 1).ToString();
-                twoBuyButton.Content = $"${Math.Round(two.CurrentPrice, 1)} {Resources["buy"]}";
-                twoProgBar.Maximum = two.TimeMs * 1000;
-                twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
-            }
+                ChangePropTwo();
             else if (number == "three")
-            {
-                threeUpgradeCountTxt.Text = three.UpgradeCount.ToString();
-                threeMoneyTxt.Text = Math.Round((three.UpgradeCount * three.DefaultMoney), 1).ToString();
-                threeBuyButton.Content = $"${Math.Round(three.CurrentPrice, 1)} {Resources["buy"]}";
-                threeProgBar.Maximum = three.TimeMs * 1000;
-                threeDurationTxt.Text = $"00:00:0{three.TimeMs}";
-            }
+                ChangePropThree();
+            else if (number == "four")
+                ChangePropFour();
+            else if (number == "five")
+                ChangePropFive();
+            else if (number == "six")
+                ChangePropSix();
+            else if (number == "seven")
+                ChangePropSeven();
+            else if (number == "eight")
+                ChangePropEight();
+            else if (number == "nine")
+                ChangePropNine();
+            else if (number == "ten")
+                ChangePropTen();
+            else
+                MessageBox.Show("Eyüp kendinde misin ChangeProperties'e yanlış bir şey yazdın?? \n \n Yazdığın şey: " + number);
+        }
+
+
+        //Buradan aşağısı garbage (bir türlü başka çözüm bulamadım)
+        private void ChangePropTen()
+        {
+            tenUpgradeCountTxt.Text = ten.UpgradeCount.ToString();
+            tenMoneyTxt.Text = Math.Round((ten.UpgradeCount * ten.DefaultMoney), 1).ToString();
+            tenBuyButton.Content = $"${Math.Round(ten.CurrentPrice, 1)} {Resources["buy"]}";
+            tenProgBar.Maximum = ten.TimeMs * 1000;
+            tenDurationTxt.Text = $"00:00:0{ten.TimeMs}";
+        }
+
+        private void ChangePropNine()
+        {
+            nineUpgradeCountTxt.Text = nine.UpgradeCount.ToString();
+            nineMoneyTxt.Text = Math.Round((nine.UpgradeCount * nine.DefaultMoney), 1).ToString();
+            nineBuyButton.Content = $"${Math.Round(nine.CurrentPrice, 1)} {Resources["buy"]}";
+            nineProgBar.Maximum = nine.TimeMs * 1000;
+            nineDurationTxt.Text = $"00:00:0{nine.TimeMs}";
+        }
+
+        private void ChangePropEight()
+        {
+            eightUpgradeCountTxt.Text = eight.UpgradeCount.ToString();
+            eightMoneyTxt.Text = Math.Round((eight.UpgradeCount * eight.DefaultMoney), 1).ToString();
+            eightBuyButton.Content = $"${Math.Round(eight.CurrentPrice, 1)} {Resources["buy"]}";
+            eightProgBar.Maximum = eight.TimeMs * 1000;
+            eightDurationTxt.Text = $"00:00:0{eight.TimeMs}";
+        }
+
+        private void ChangePropSeven()
+        {
+            sevenUpgradeCountTxt.Text = seven.UpgradeCount.ToString();
+            sevenMoneyTxt.Text = Math.Round((seven.UpgradeCount * seven.DefaultMoney), 1).ToString();
+            sevenBuyButton.Content = $"${Math.Round(seven.CurrentPrice, 1)} {Resources["buy"]}";
+            sevenProgBar.Maximum = seven.TimeMs * 1000;
+            sevenDurationTxt.Text = $"00:00:0{seven.TimeMs}";
+        }
+
+        private void ChangePropSix()
+        {
+            sixUpgradeCountTxt.Text = six.UpgradeCount.ToString();
+            sixMoneyTxt.Text = Math.Round((six.UpgradeCount * six.DefaultMoney), 1).ToString();
+            sixBuyButton.Content = $"${Math.Round(six.CurrentPrice, 1)} {Resources["buy"]}";
+            sixProgBar.Maximum = six.TimeMs * 1000;
+            sixDurationTxt.Text = $"00:00:0{six.TimeMs}";
+        }
+
+        private void ChangePropFive()
+        {
+            fiveUpgradeCountTxt.Text = five.UpgradeCount.ToString();
+            fiveMoneyTxt.Text = Math.Round((five.UpgradeCount * five.DefaultMoney), 1).ToString();
+            fiveBuyButton.Content = $"${Math.Round(five.CurrentPrice, 1)} {Resources["buy"]}";
+            fiveProgBar.Maximum = five.TimeMs * 1000;
+            fiveDurationTxt.Text = $"00:00:0{five.TimeMs}";
+        }
+
+        private void ChangePropFour()
+        {
+            fourUpgradeCountTxt.Text = four.UpgradeCount.ToString();
+            fourMoneyTxt.Text = Math.Round((four.UpgradeCount * four.DefaultMoney), 1).ToString();
+            fourBuyButton.Content = $"${Math.Round(four.CurrentPrice, 1)} {Resources["buy"]}";
+            fourProgBar.Maximum = four.TimeMs * 1000;
+            fourDurationTxt.Text = $"00:00:0{four.TimeMs}";
+        }
+
+        private void ChangePropThree()
+        {
+            threeUpgradeCountTxt.Text = three.UpgradeCount.ToString();
+            threeMoneyTxt.Text = Math.Round((three.UpgradeCount * three.DefaultMoney), 1).ToString();
+            threeBuyButton.Content = $"${Math.Round(three.CurrentPrice, 1)} {Resources["buy"]}";
+            threeProgBar.Maximum = three.TimeMs * 1000;
+            threeDurationTxt.Text = $"00:00:0{three.TimeMs}";
+        }
+
+        private void ChangePropTwo()
+        {
+            twoUpgradeCountTxt.Text = two.UpgradeCount.ToString();
+            twoMoneyTxt.Text = Math.Round((two.UpgradeCount * two.DefaultMoney), 1).ToString();
+            twoBuyButton.Content = $"${Math.Round(two.CurrentPrice, 1)} {Resources["buy"]}";
+            twoProgBar.Maximum = two.TimeMs * 1000;
+            twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
+        }
+
+        private void ChangePropOne()
+        {
+            oneUpgradeCountTxt.Text = one.UpgradeCount.ToString();
+            oneMoneyTxt.Text = Math.Round((one.UpgradeCount * one.DefaultMoney), 1).ToString();
+            oneBuyButton.Content = $"${Math.Round(one.CurrentPrice, 1)} {Resources["buy"]}";
+            oneProgBar.Maximum = one.TimeMs * 1000;
+            oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
         }
         #endregion
     }
