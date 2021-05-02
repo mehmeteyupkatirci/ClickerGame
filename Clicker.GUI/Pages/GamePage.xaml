@@ -62,7 +62,7 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Name="twoUpgradeCountTxt" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Name="twoUpgradeCountTxt" Text="TWO" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
                     <ProgressBar Name="twoProgBar" MouseDoubleClick="twoProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="twoMoneyTxt" Foreground="#F2F2F2" Text="200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="twoBuyButton" Click="twoBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
@@ -81,11 +81,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="threeUpgradeCountTxt" Text="THREE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="threeProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="threeMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="threeBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="threeDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -100,11 +100,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="fourUpgradeCountTxt" Text="FOUR" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="fourProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="fourMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="fourBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="fourDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -119,11 +119,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="fiveUpgradeCountTxt" Text="FIVE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="fiveProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="fiveMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="fiveBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="fiveDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -141,11 +141,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="sixUpgradeCountTxt" Text="SIX" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="sixProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="sixMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="sixBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="sixDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -160,11 +160,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="sevenUpgradeCountTxt" Text="SEVEN" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="sevenProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="sevenMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="sevenBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="sevenDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -179,11 +179,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="eightUpgradeCountTxt" Text="EIGHT" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="eightProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="eightMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="eightBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="eightDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -198,11 +198,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="nineUpgradeCountTxt" Text="NINE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="nineProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="nineMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="nineBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="nineDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -217,11 +217,11 @@
                         <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
                     </StackPanel>
 
-                    <TextBlock Foreground="#F2F2F2" Text="30" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
-                    <ProgressBar Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
-                    <TextBlock Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
-                    <Button Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="tenUpgradeCountTxt" Text="TEN" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <ProgressBar Name="tenProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
+                    <TextBlock Name="tenMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                    <Button Name="tenBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                    <TextBlock Name="tenDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>

@@ -44,6 +44,7 @@ namespace Clicker.GUI.Pages
                 await Task.Delay(200);
                 OneRefresh();
                 TwoRefresh();
+                ThreeRefresh();
             }
         }
 
@@ -85,10 +86,28 @@ namespace Clicker.GUI.Pages
             }
         }
 
+        private void ThreeRefresh()
+        {
+            threeProgBar.Value += 200;
+            threeMoneyTxt.Text = (three.UpgradeCount * three.DefaultMoney).ToString();
+
+            if (!(money >= three.CurrentPrice))
+                threeBuyButton.IsEnabled = false;
+            else
+                threeBuyButton.IsEnabled = true;
+
+            if (threeProgBar.Value >= (three.TimeMs * 1000) && three.Manager)
+            {
+                money = (three.UpgradeCount * three.DefaultMoney) + money;
+                MoneyWriter();
+                oneProgBar.Value = 0;
+            }
+        }
+
         #endregion
 
         #region ProgressBar DoubleClicks
-       
+
         private void oneProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (oneProgBar.Value == (one.TimeMs * 1000))
@@ -105,17 +124,30 @@ namespace Clicker.GUI.Pages
 
         private void twoProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (twoProgBar.Value == twoProgBar.Maximum)
+            if (twoProgBar.Value == (two.TimeMs * 1000))
             {
-                moneyTxt.Text = (Convert.ToDouble(oneMoneyTxt.Text) + Convert.ToDouble(moneyTxt.Text)).ToString();
-                oneProgBar.Value = 0;
+                money = (two.UpgradeCount * two.DefaultMoney) + money;
+                MoneyWriter();
+                twoProgBar.Value = 0;
             }
             else
             {
-                MessageBox.Show("!");
+                MessageBox.Show("Hazır değil");
             }
         }
-
+        private void threeProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (threeProgBar.Value == (three.TimeMs * 1000))
+            {
+                money = (three.UpgradeCount * three.DefaultMoney) + money;
+                MoneyWriter();
+                threeProgBar.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Hazır değil");
+            }
+        }
         #endregion
 
         #region Buy Buttons
@@ -128,7 +160,7 @@ namespace Clicker.GUI.Pages
                 money = money - one.CurrentPrice;
                 one.CurrentPrice *= 1.21;
                 MoneyWriter();
-                ChangeOneProperties();
+                ChangeProperties("one");
             }
             else
             {
@@ -138,12 +170,13 @@ namespace Clicker.GUI.Pages
 
         private void twoBuyButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Convert.ToDouble(moneyTxt.Text) >= two.CurrentPrice)
+            if (money >= two.CurrentPrice)
             {
-                twoUpgradeCountTxt.Text = (two.UpgradeCount + 1).ToString();
-                moneyTxt.Text = (Convert.ToDouble(moneyTxt.Text) - two.CurrentPrice).ToString();
-                two.CurrentPrice = Math.Round(two.DefaultMoney * Math.Pow(1.15, Convert.ToDouble(twoUpgradeCountTxt.Text)), 1);
-                twoBuyButton.Content = $"${two.CurrentPrice} {Resources["buy"]}";
+                two.UpgradeCount += 1;
+                money = money - two.CurrentPrice;
+                two.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("two");
             }
             else
             {
@@ -151,6 +184,21 @@ namespace Clicker.GUI.Pages
             }
         }
 
+        private void threeBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (money >= three.CurrentPrice)
+            {
+                three.UpgradeCount += 1;
+                money = money - three.CurrentPrice;
+                three.CurrentPrice *= 1.21;
+                MoneyWriter();
+                ChangeProperties("three");
+            }
+            else
+            {
+                MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
         #endregion
 
         #region DBOperations
@@ -161,8 +209,7 @@ namespace Clicker.GUI.Pages
         public void SetGameFromDb()
         {
             Convert.ToDouble(_configurationDataService.UpdateConfigurationData("money", money.ToString()));
-            OneSetImprovement();
-            TwoSetImprovement();
+            SetAllImrpovement();
         }
 
         ///<summary>
@@ -171,33 +218,36 @@ namespace Clicker.GUI.Pages
         public void GetGameDataFromDb()
         {
             money = Convert.ToDouble(_configurationDataService.GetConfigurationData("money").Value);
-            OneGetImprovement();
-            TwoGetImprovement();
+            GetAllImprovement();
+            ChangeProperties("all");
         }
 
-        private void OneGetImprovement()
+        private void GetAllImprovement()
         {
             one = _improvementService.GetImprovement("one");
-            ChangeOneProperties();
-        }
-
-        private void TwoGetImprovement()
-        {
             two = _improvementService.GetImprovement("two");
-            twoUpgradeCountTxt.Text = two.UpgradeCount.ToString();
-            twoProgBar.Maximum = two.TimeMs * 1000;
-            twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
-            twoMoneyTxt.Text = (Convert.ToDouble(two.UpgradeCount) * two.DefaultMoney).ToString();
+            three = _improvementService.GetImprovement("three");
+            four = _improvementService.GetImprovement("four");
+            five = _improvementService.GetImprovement("five");
+            six = _improvementService.GetImprovement("six");
+            seven = _improvementService.GetImprovement("seven");
+            eight = _improvementService.GetImprovement("eight");
+            nine = _improvementService.GetImprovement("nine");
+            ten = _improvementService.GetImprovement("ten");
         }
 
-        private void OneSetImprovement()
+        private void SetAllImrpovement()
         {
             _improvementService.UpdateImprovement(one);
-        }
-
-        private void TwoSetImprovement()
-        {
             _improvementService.UpdateImprovement(two);
+            _improvementService.UpdateImprovement(three);
+            _improvementService.UpdateImprovement(four);
+            _improvementService.UpdateImprovement(five);
+            _improvementService.UpdateImprovement(six);
+            _improvementService.UpdateImprovement(seven);
+            _improvementService.UpdateImprovement(eight);
+            _improvementService.UpdateImprovement(nine);
+            _improvementService.UpdateImprovement(ten);
         }
         #endregion
 
@@ -211,13 +261,70 @@ namespace Clicker.GUI.Pages
             moneyTxt.Text = Math.Round(money, 1).ToString();
         }
 
-        private void ChangeOneProperties()
+
+        /// <summary>
+        /// Bu fonksiyon içerisine aldığı sayının GUI'de bulunan ilgili yerlerini değiştirir. Mesela : three aldıysa 3. ye ait bütün görsel (textBox, progressBar vs.) yenilenmiş olur.
+        /// </summary>
+        /// <param name="number"></param>
+        private void ChangeProperties(string number)
         {
-            oneUpgradeCountTxt.Text = one.UpgradeCount.ToString();
-            oneMoneyTxt.Text = Math.Round((one.UpgradeCount * one.DefaultMoney), 1).ToString();
-            oneBuyButton.Content = $"${Math.Round(one.CurrentPrice, 1)} {Resources["buy"]}";
-            oneProgBar.Maximum = one.TimeMs * 1000;
-            oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
+            if (number == "all")
+            {   //1
+                oneUpgradeCountTxt.Text = one.UpgradeCount.ToString();
+                oneMoneyTxt.Text = Math.Round((one.UpgradeCount * one.DefaultMoney), 1).ToString();
+                oneBuyButton.Content = $"${Math.Round(one.CurrentPrice, 1)} {Resources["buy"]}";
+                oneProgBar.Maximum = one.TimeMs * 1000;
+                oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
+                //2
+                twoUpgradeCountTxt.Text = two.UpgradeCount.ToString();
+                twoMoneyTxt.Text = Math.Round((two.UpgradeCount * two.DefaultMoney), 1).ToString();
+                twoBuyButton.Content = $"${Math.Round(two.CurrentPrice, 1)} {Resources["buy"]}";
+                twoProgBar.Maximum = two.TimeMs * 1000;
+                twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
+                //3
+                threeUpgradeCountTxt.Text = three.UpgradeCount.ToString();
+                threeMoneyTxt.Text = Math.Round((three.UpgradeCount * three.DefaultMoney), 1).ToString();
+                threeBuyButton.Content = $"${Math.Round(three.CurrentPrice, 1)} {Resources["buy"]}";
+                threeProgBar.Maximum = three.TimeMs * 1000;
+                threeDurationTxt.Text = $"00:00:0{three.TimeMs}";
+                //4
+
+                //5
+
+                //6
+
+                //7
+
+                //8
+
+                //9
+
+                //10
+            }
+            else if (number == "one")
+            {
+                oneUpgradeCountTxt.Text = one.UpgradeCount.ToString();
+                oneMoneyTxt.Text = Math.Round((one.UpgradeCount * one.DefaultMoney), 1).ToString();
+                oneBuyButton.Content = $"${Math.Round(one.CurrentPrice, 1)} {Resources["buy"]}";
+                oneProgBar.Maximum = one.TimeMs * 1000;
+                oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
+            }
+            else if (number == "two")
+            {
+                twoUpgradeCountTxt.Text = two.UpgradeCount.ToString();
+                twoMoneyTxt.Text = Math.Round((two.UpgradeCount * two.DefaultMoney), 1).ToString();
+                twoBuyButton.Content = $"${Math.Round(two.CurrentPrice, 1)} {Resources["buy"]}";
+                twoProgBar.Maximum = two.TimeMs * 1000;
+                twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
+            }
+            else if (number == "three")
+            {
+                threeUpgradeCountTxt.Text = three.UpgradeCount.ToString();
+                threeMoneyTxt.Text = Math.Round((three.UpgradeCount * three.DefaultMoney), 1).ToString();
+                threeBuyButton.Content = $"${Math.Round(three.CurrentPrice, 1)} {Resources["buy"]}";
+                threeProgBar.Maximum = three.TimeMs * 1000;
+                threeDurationTxt.Text = $"00:00:0{three.TimeMs}";
+            }
         }
         #endregion
     }
