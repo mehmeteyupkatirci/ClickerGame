@@ -23,13 +23,21 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Foreground="#F2F2F2" Name="moneyTxt" Text="MONEY" Margin="30,10,10,10" FontSize="40"/>
-        <TextBlock Foreground="#F2F2F2" Text="$" Margin="10" FontSize="40"/>
-        <Button Name="btnFirstPage" Background="#240246" Grid.ColumnSpan="2" BorderThickness="0" VerticalAlignment="Top" ToolTip="{DynamicResource back2HomePage}"  HorizontalAlignment="Right" Click="btnFirstPage_Click">
-            <Button.Content>
-                <Image Height="46" Width="46" Source="../Resources/Icons/icons8-home-50.png"/>
-            </Button.Content>
-        </Button>
+        <TextBlock Foreground="#F2F2F2" Name="moneyTxt" Text="MONEY" Margin="40,10,10,10" FontSize="40"/>
+        <TextBlock Foreground="#F2F2F2" Text="$" Margin="20,10,0,10" FontSize="40"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,10,30,10" HorizontalAlignment="Right" Grid.Column="1">
+            <Button Name="btnShopPage" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}"  HorizontalAlignment="Right" Click="btnShopPage_Click">
+                <Button.Content>
+                    <Image Height="46" Width="46" Source="../Resources/Icons/icons8-shop-96.png"/>
+                </Button.Content>
+            </Button>
+            <Button Name="btnFirstPage" Margin="5,0" Background="Transparent"  BorderThickness="0" ToolTip="{DynamicResource back2HomePage}"  HorizontalAlignment="Right" Click="btnFirstPage_Click">
+                <Button.Content>
+                    <Image Height="46" Width="46" Source="../Resources/Icons/icons8-home-50.png"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+        
         <!--#region Left-->
 
         <DockPanel Grid.Row="1" Margin="30,0">
@@ -47,7 +55,7 @@
                     <ProgressBar Name="oneProgBar" Background="#AA9AB9" MouseDoubleClick="oneProgBar_MouseDoubleClick" Grid.Column="2" Minimum="0" Value="0" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="oneMoneyTxt" Foreground="#F2F2F2" Text="ONE" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="oneBuyButton" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="oneBuyButton_Click"/>
-                    <TextBlock Name="oneDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:ONE" FontSize="18"/>
+                    <TextBlock Name="oneDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="ONE" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -66,7 +74,7 @@
                     <ProgressBar Name="twoProgBar" MouseDoubleClick="twoProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="twoMoneyTxt" Foreground="#F2F2F2" Text="200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="twoBuyButton" Click="twoBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="twoDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:08" FontSize="18"/>
+                    <TextBlock Name="twoDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="08" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -85,7 +93,7 @@
                     <ProgressBar Name="threeProgBar" MouseDoubleClick="threeProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="threeMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="threeBuyButton" Click="threeBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="threeDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="threeDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -104,7 +112,7 @@
                     <ProgressBar Name="fourProgBar" MouseDoubleClick="fourProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="fourMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="fourBuyButton" Click="fourBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="fourDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="fourDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -123,7 +131,7 @@
                     <ProgressBar Name="fiveProgBar" MouseDoubleClick="fiveProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="fiveMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="fiveBuyButton" Click="fiveBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="fiveDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="fiveDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -145,7 +153,7 @@
                     <ProgressBar Name="sixProgBar" MouseDoubleClick="sixProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="sixMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="sixBuyButton" Click="sixBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="sixDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="sixDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -164,7 +172,7 @@
                     <ProgressBar Name="sevenProgBar" MouseDoubleClick="sevenProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="sevenMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="sevenBuyButton" Click="sevenBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="sevenDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="sevenDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -183,7 +191,7 @@
                     <ProgressBar Name="eightProgBar" MouseDoubleClick="eightProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="eightMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="eightBuyButton" Click="eightBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="eightDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="eightDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -202,7 +210,7 @@
                     <ProgressBar Name="nineProgBar" MouseDoubleClick="nineProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="nineMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="nineBuyButton" Click="nineBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="nineDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="nineDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>
@@ -221,7 +229,7 @@
                     <ProgressBar Name="tenProgBar" MouseDoubleClick="tenProgBar_MouseDoubleClick" Background="#AA9AB9" Value="50" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Margin="10,7,10,0" VerticalAlignment="Top" Foreground="#806896"/>
                     <TextBlock Name="tenMoneyTxt" Foreground="#F2F2F2" Text="$200" FontSize="18" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
                     <Button Name="tenBuyButton" Click="tenBuyButton_Click" Foreground="#F2F2F2" BorderThickness="0" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="2" Margin="10,25,10,10" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-                    <TextBlock Name="tenDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00:00:00" FontSize="18"/>
+                    <TextBlock Name="tenDurationTxt" Foreground="#F2F2F2" Grid.Column="2" Margin="10,40,10,0" HorizontalAlignment="Right" FontWeight="Bold" Text="00" FontSize="18"/>
                 </Grid>
             </Border>
         </DockPanel>

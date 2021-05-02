@@ -37,6 +37,12 @@ namespace Clicker.GUI.Pages
             }
         }
 
+        private void btnShopPage_Click(object sender, RoutedEventArgs e)
+        {
+            SetGameFromDb();
+            this.NavigationService.Navigate(new ShopPage());
+        }
+
         public async void Refresh(CancellationToken cancellationToken)
         {
             while (!cancellationToken.IsCancellationRequested)
@@ -314,7 +320,7 @@ namespace Clicker.GUI.Pages
             {
                 MessageBox.Show("Hazır değil");
             }
-        }       
+        }
 
         private void sevenProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -371,7 +377,7 @@ namespace Clicker.GUI.Pages
             }
         }
 
-      
+
         #endregion
 
         #region Buy Buttons
@@ -652,7 +658,7 @@ namespace Clicker.GUI.Pages
             tenMoneyTxt.Text = Math.Round((ten.UpgradeCount * ten.DefaultMoney), 1).ToString();
             tenBuyButton.Content = $"${Math.Round(ten.CurrentPrice, 1)} {Resources["buy"]}";
             tenProgBar.Maximum = ten.TimeMs * 1000;
-            tenDurationTxt.Text = $"00:00:0{ten.TimeMs}";
+            tenDurationTxt.Text = $"{ten.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropNine()
@@ -661,7 +667,7 @@ namespace Clicker.GUI.Pages
             nineMoneyTxt.Text = Math.Round((nine.UpgradeCount * nine.DefaultMoney), 1).ToString();
             nineBuyButton.Content = $"${Math.Round(nine.CurrentPrice, 1)} {Resources["buy"]}";
             nineProgBar.Maximum = nine.TimeMs * 1000;
-            nineDurationTxt.Text = $"00:00:0{nine.TimeMs}";
+            nineDurationTxt.Text = $"{nine.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropEight()
@@ -670,7 +676,7 @@ namespace Clicker.GUI.Pages
             eightMoneyTxt.Text = Math.Round((eight.UpgradeCount * eight.DefaultMoney), 1).ToString();
             eightBuyButton.Content = $"${Math.Round(eight.CurrentPrice, 1)} {Resources["buy"]}";
             eightProgBar.Maximum = eight.TimeMs * 1000;
-            eightDurationTxt.Text = $"00:00:0{eight.TimeMs}";
+            eightDurationTxt.Text = $"{eight.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropSeven()
@@ -679,7 +685,7 @@ namespace Clicker.GUI.Pages
             sevenMoneyTxt.Text = Math.Round((seven.UpgradeCount * seven.DefaultMoney), 1).ToString();
             sevenBuyButton.Content = $"${Math.Round(seven.CurrentPrice, 1)} {Resources["buy"]}";
             sevenProgBar.Maximum = seven.TimeMs * 1000;
-            sevenDurationTxt.Text = $"00:00:0{seven.TimeMs}";
+            sevenDurationTxt.Text = $"{seven.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropSix()
@@ -688,7 +694,7 @@ namespace Clicker.GUI.Pages
             sixMoneyTxt.Text = Math.Round((six.UpgradeCount * six.DefaultMoney), 1).ToString();
             sixBuyButton.Content = $"${Math.Round(six.CurrentPrice, 1)} {Resources["buy"]}";
             sixProgBar.Maximum = six.TimeMs * 1000;
-            sixDurationTxt.Text = $"00:00:0{six.TimeMs}";
+            sixDurationTxt.Text = $"{six.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropFive()
@@ -697,7 +703,7 @@ namespace Clicker.GUI.Pages
             fiveMoneyTxt.Text = Math.Round((five.UpgradeCount * five.DefaultMoney), 1).ToString();
             fiveBuyButton.Content = $"${Math.Round(five.CurrentPrice, 1)} {Resources["buy"]}";
             fiveProgBar.Maximum = five.TimeMs * 1000;
-            fiveDurationTxt.Text = $"00:00:0{five.TimeMs}";
+            fiveDurationTxt.Text = $"{five.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropFour()
@@ -706,7 +712,7 @@ namespace Clicker.GUI.Pages
             fourMoneyTxt.Text = Math.Round((four.UpgradeCount * four.DefaultMoney), 1).ToString();
             fourBuyButton.Content = $"${Math.Round(four.CurrentPrice, 1)} {Resources["buy"]}";
             fourProgBar.Maximum = four.TimeMs * 1000;
-            fourDurationTxt.Text = $"00:00:0{four.TimeMs}";
+            fourDurationTxt.Text = $"{four.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropThree()
@@ -715,7 +721,7 @@ namespace Clicker.GUI.Pages
             threeMoneyTxt.Text = Math.Round((three.UpgradeCount * three.DefaultMoney), 1).ToString();
             threeBuyButton.Content = $"${Math.Round(three.CurrentPrice, 1)} {Resources["buy"]}";
             threeProgBar.Maximum = three.TimeMs * 1000;
-            threeDurationTxt.Text = $"00:00:0{three.TimeMs}";
+            threeDurationTxt.Text = $"{three.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropTwo()
@@ -724,7 +730,7 @@ namespace Clicker.GUI.Pages
             twoMoneyTxt.Text = Math.Round((two.UpgradeCount * two.DefaultMoney), 1).ToString();
             twoBuyButton.Content = $"${Math.Round(two.CurrentPrice, 1)} {Resources["buy"]}";
             twoProgBar.Maximum = two.TimeMs * 1000;
-            twoDurationTxt.Text = $"00:00:0{two.TimeMs}";
+            twoDurationTxt.Text = $"{two.TimeMs} {Resources["shortSecond"]}";
         }
 
         private void ChangePropOne()
@@ -733,7 +739,7 @@ namespace Clicker.GUI.Pages
             oneMoneyTxt.Text = Math.Round((one.UpgradeCount * one.DefaultMoney), 1).ToString();
             oneBuyButton.Content = $"${Math.Round(one.CurrentPrice, 1)} {Resources["buy"]}";
             oneProgBar.Maximum = one.TimeMs * 1000;
-            oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
+            oneDurationTxt.Text = $"{one.TimeMs} {Resources["shortSecond"]}";
         }
         #endregion
     }

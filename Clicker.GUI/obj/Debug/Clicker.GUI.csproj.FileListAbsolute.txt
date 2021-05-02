@@ -45,3 +45,5 @@ C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.DataAccess.dll.
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Entities.pdb
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Business.dll
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Business.pdb
+C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Pages\ShopPage.g.cs
+C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Pages\ShopPage.baml

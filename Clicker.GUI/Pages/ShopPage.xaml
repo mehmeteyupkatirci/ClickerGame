@@ -1,0 +1,153 @@
+﻿<Page x:Class="Clicker.GUI.Pages.ShopPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Clicker.GUI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ShopPage">
+    <Page.Resources>
+        <ResourceDictionary Source="../Resources/Lang/string_tr.xaml"/>
+    </Page.Resources>
+    <Grid Background="#240246">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Name="btnGamePage" Margin="20,10,0,10" Background="Transparent"  BorderThickness="0" ToolTip="{DynamicResource back2game}"  HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnGamePage_Click">
+            <Button.Content>
+                <Image Height="46" Width="46" Source="../Resources/Icons/icons8-left-arrow-52.png"/>
+            </Button.Content>
+        </Button>
+        <TabControl Grid.Row="1" Grid.ColumnSpan="2">
+            <TabItem Width="265" Height="30">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Height="25" Width="38" Margin="-3,0,0,0">
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="Resources\Icon\icons8_create_2.ico" />
+                                </Style>
+                            </Image.Style>
+                        </Image>-->
+                        <TextBlock Text="MENAJER"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Width="265" Height="30">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Height="25" Width="38" Margin="-3,0,0,0">
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="Resources\Icon\icons8_create_2.ico" />
+                                </Style>
+                            </Image.Style>
+                        </Image>-->
+                        <TextBlock Text="2X KAZANÇ"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Width="265" Height="30">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Height="25" Width="38" Margin="-3,0,0,0">
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="Resources\Icon\icons8_create_2.ico" />
+                                </Style>
+                            </Image.Style>
+                        </Image>-->
+                        <TextBlock Text="2X SÜRE"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
+                    <Button Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
+                    <Button Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">
+            <StackPanel Margin="55,0">
+                <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+            </StackPanel>
+            <StackPanel Margin="55,0">
+                <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+            </StackPanel>
+            <StackPanel Margin="55,0">
+                <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+            </StackPanel>
+        </StackPanel>-->
+        
+    </Grid>
+</Page>

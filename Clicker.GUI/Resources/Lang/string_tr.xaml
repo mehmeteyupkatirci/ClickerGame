@@ -9,4 +9,8 @@
     <system:String x:Key="buy">Satın Al</system:String>
     <system:String x:Key="back2HomePageMB">Anasayfaya dönmek istediğinize emin misiniz?</system:String>
     <system:String x:Key="notEnoughMoney">Satın almak için paranız yetersiz!</system:String>
+    <system:String x:Key="shortSecond">sn</system:String>
+    <system:String x:Key="go2shop">Mağazaya Git</system:String>
+    <system:String x:Key="back2game">Oyuna Dön</system:String>
+    
 </ResourceDictionary>
