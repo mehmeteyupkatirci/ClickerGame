@@ -11,9 +11,9 @@ namespace Clicker.Business.Abstract
     {
         bool InitConfigurationData();
         List<ConfigurationData> ConfigurationDataList();
-        ConfigurationData GetConfigurationData(string improvementId);
-        bool UpdateConfigurationData(ConfigurationData improvement);
-        void DeleteConfigurationData(ConfigurationData improvement);
-        bool AddConfigurationData(ConfigurationData improvement);
+        ConfigurationData GetConfigurationData(string key);
+        bool UpdateConfigurationData(string key, string value);
+        void DeleteConfigurationData(string key);
+        bool AddConfigurationData(string key, string value);
     }
 }

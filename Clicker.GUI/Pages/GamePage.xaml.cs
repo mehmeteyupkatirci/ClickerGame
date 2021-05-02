@@ -11,11 +11,11 @@ namespace Clicker.GUI.Pages
 {
     public partial class GamePage : Page
     {
-        private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         ImprovementService _improvementService = new ImprovementService();
+        ConfigurationDataService _configurationDataService = new ConfigurationDataService();
 
         private Improvement one, two, three, four, five, six, seven, eight, nine, ten;
-
+        private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         private double money = 0;
 
         public GamePage()
@@ -37,8 +37,6 @@ namespace Clicker.GUI.Pages
             }
         }
 
-        #region Refresh Operations
-
         public async void Refresh(CancellationToken cancellationToken)
         {
             while (!cancellationToken.IsCancellationRequested)
@@ -48,6 +46,8 @@ namespace Clicker.GUI.Pages
                 TwoRefresh();
             }
         }
+
+        #region Refresh Operations
 
         private void OneRefresh()
         {
@@ -128,7 +128,6 @@ namespace Clicker.GUI.Pages
                 money = money - one.CurrentPrice;
                 one.CurrentPrice *= 1.21;
                 MoneyWriter();
-
                 ChangeOneProperties();
             }
             else
@@ -155,11 +154,13 @@ namespace Clicker.GUI.Pages
         #endregion
 
         #region DBOperations
+
         ///<summary>
         ///Database içerisinde oyun için gerekli olan tüm bilgileri günceller. Oyunu kapatırken ya da önceki menüye dönmek istenildiğinde kullanılır.
         ///</summary>
         public void SetGameFromDb()
         {
+            Convert.ToDouble(_configurationDataService.UpdateConfigurationData("money", money.ToString()));
             OneSetImprovement();
             TwoSetImprovement();
         }
@@ -169,6 +170,7 @@ namespace Clicker.GUI.Pages
         ///</summary>
         public void GetGameDataFromDb()
         {
+            money = Convert.ToDouble(_configurationDataService.GetConfigurationData("money").Value);
             OneGetImprovement();
             TwoGetImprovement();
         }
@@ -217,7 +219,6 @@ namespace Clicker.GUI.Pages
             oneProgBar.Maximum = one.TimeMs * 1000;
             oneDurationTxt.Text = $"00:00:0{one.TimeMs}";
         }
-
         #endregion
     }
 }

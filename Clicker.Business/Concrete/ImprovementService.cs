@@ -53,16 +53,19 @@ namespace Clicker.Business.Concrete
             return _improvementDal.GetList();
         }
 
+        ///<summary>
+        ///Oyun ilk defa çalıştığında database'e ilgili sütünları ekler. (InitConfiguration true geldiğinde çağırılır)
+        ///</summary>
         public bool InitImprovements()
         {
             try
             {
-                _improvementDal.Add(new Improvement() { Id = "one", CurrentPrice = 10, DefaultMoney = 1, Manager = false, TimeMs = 2, UpgradeCount = 1 });
+                _improvementDal.Add(new Improvement() { Id = "one", CurrentPrice = 10, DefaultMoney = 1, Manager = true, TimeMs = 2, UpgradeCount = 1 });
                 _improvementDal.Add(new Improvement() { Id = "two", CurrentPrice = 50, DefaultMoney = 5, Manager = false, TimeMs = 4, UpgradeCount = 0 });
                 _improvementDal.Add(new Improvement() { Id = "three", CurrentPrice = 1000, DefaultMoney = 30, Manager = false, TimeMs = 6, UpgradeCount = 0 });
                 _improvementDal.Add(new Improvement() { Id = "four", CurrentPrice = 5000, DefaultMoney = 100, Manager = false, TimeMs = 8, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "five", CurrentPrice = 30.000, DefaultMoney = 1000, Manager = false, TimeMs = 10, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "six", CurrentPrice = 100.000, DefaultMoney = 5000, Manager = false, TimeMs = 12, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "five", CurrentPrice = 30000, DefaultMoney = 1000, Manager = false, TimeMs = 10, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "six", CurrentPrice = 100000, DefaultMoney = 5000, Manager = false, TimeMs = 12, UpgradeCount = 0 });
                 _improvementDal.Add(new Improvement() { Id = "seven", CurrentPrice = 1000000, DefaultMoney = 50000, Manager = false, TimeMs = 14, UpgradeCount = 0 });
                 _improvementDal.Add(new Improvement() { Id = "eight", CurrentPrice = 10000000, DefaultMoney = 1000000, Manager = false, TimeMs = 16, UpgradeCount = 0 });
                 _improvementDal.Add(new Improvement() { Id = "nine", CurrentPrice = 50000000, DefaultMoney = 10000000, Manager = false, TimeMs = 18, UpgradeCount = 0 });

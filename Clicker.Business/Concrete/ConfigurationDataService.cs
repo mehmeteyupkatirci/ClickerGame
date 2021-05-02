@@ -13,24 +13,32 @@ namespace Clicker.Business.Concrete
     {
         EfConfigurationDataDal _configurationDataDal = new EfConfigurationDataDal();
 
-        public bool AddConfigurationData(ConfigurationData improvement)
+        public bool AddConfigurationData(string key, string value)
         {
-            throw new NotImplementedException();
+            var result = _configurationDataDal.Add(new ConfigurationData { Key = key, Value = value });
+            if (result != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public List<ConfigurationData> ConfigurationDataList()
         {
-            throw new NotImplementedException();
+            return _configurationDataDal.GetList();
         }
 
-        public void DeleteConfigurationData(ConfigurationData improvement)
+        public void DeleteConfigurationData(string key)
         {
-            throw new NotImplementedException();
+            _configurationDataDal.Delete(_configurationDataDal.Get(x => x.Key == key));
         }
 
-        public ConfigurationData GetConfigurationData(string improvementId)
+        public ConfigurationData GetConfigurationData(string key)
         {
-            throw new NotImplementedException();
+            return _configurationDataDal.Get(x => x.Key == key);
         }
 
         ///<summary>
@@ -41,9 +49,9 @@ namespace Clicker.Business.Concrete
             var isFirstOpen = _configurationDataDal.Get(x => x.Key == "firstLoad");
             if (isFirstOpen == null)
             {
-                isFirstOpen = new ConfigurationData { Key = "firstLoad", Value = "done" };
-                _configurationDataDal.Add(isFirstOpen);
-                var money = new ConfigurationData { Key = "money", Value = "0" };
+                _configurationDataDal.Add(new ConfigurationData { Key = "firstLoad", Value = "done" });
+                _configurationDataDal.Add(new ConfigurationData { Key = "money", Value = "0" });
+
                 return true;
             }
             else
@@ -52,9 +60,19 @@ namespace Clicker.Business.Concrete
             }
         }
 
-        public bool UpdateConfigurationData(ConfigurationData improvement)
+        public bool UpdateConfigurationData(string key, string value)
         {
-            throw new NotImplementedException();
+            var configItem = _configurationDataDal.Get(x => x.Key == key);
+            configItem.Value = value;
+            var result = _configurationDataDal.Update(configItem);
+            if (result != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
