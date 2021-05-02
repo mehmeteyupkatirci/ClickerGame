@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Clicker.DataAccess.Concrete.EntityFramework.Mappings
 {
-    public class ImprovementMap : EntityTypeConfiguration<ConfigurationData>
+    public class ImprovementMap : EntityTypeConfiguration<Improvement>
     {
         public ImprovementMap()
         {

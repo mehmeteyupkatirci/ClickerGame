@@ -16,7 +16,7 @@ namespace Clicker.Business.Concrete
         ///<summary>
         ///Database yeni bir Improvement ekler.
         ///</summary>
-        public bool AddImprovement(ConfigurationData improvement)
+        public bool AddImprovement(Improvement improvement)
         {
             var result = _improvementDal.Add(improvement);
             if (result != null)
@@ -32,7 +32,7 @@ namespace Clicker.Business.Concrete
         ///<summary>
         ///Database'den ilgili Improvement bilgilerini siler.
         ///</summary>
-        public void DeleteImprovement(ConfigurationData improvement)
+        public void DeleteImprovement(Improvement improvement)
         {
             _improvementDal.Delete(improvement);
         }
@@ -40,7 +40,7 @@ namespace Clicker.Business.Concrete
         ///<summary>
         ///Database'den ilgili Improvement bilgilerini getirir.
         ///</summary>
-        public ConfigurationData GetImprovement(string improvementId)
+        public Improvement GetImprovement(string improvementId)
         {
             return _improvementDal.Get(x => x.Id == improvementId);
         }
@@ -48,20 +48,37 @@ namespace Clicker.Business.Concrete
         ///<summary>
         ///Database'de bulunan tüm Improvement bilgilerini getirir.
         ///</summary>
-        public List<ConfigurationData> ImprovementList()
+        public List<Improvement> ImprovementList()
         {
             return _improvementDal.GetList();
         }
 
         public bool InitImprovements()
         {
-            throw new NotImplementedException();
+            try
+            {
+                _improvementDal.Add(new Improvement() { Id = "one", CurrentPrice = 10, DefaultMoney = 1, Manager = false, TimeMs = 2, UpgradeCount = 1 });
+                _improvementDal.Add(new Improvement() { Id = "two", CurrentPrice = 50, DefaultMoney = 5, Manager = false, TimeMs = 4, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "three", CurrentPrice = 1000, DefaultMoney = 30, Manager = false, TimeMs = 6, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "four", CurrentPrice = 5000, DefaultMoney = 100, Manager = false, TimeMs = 8, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "five", CurrentPrice = 30.000, DefaultMoney = 1000, Manager = false, TimeMs = 10, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "six", CurrentPrice = 100.000, DefaultMoney = 5000, Manager = false, TimeMs = 12, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "seven", CurrentPrice = 1000000, DefaultMoney = 50000, Manager = false, TimeMs = 14, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "eight", CurrentPrice = 10000000, DefaultMoney = 1000000, Manager = false, TimeMs = 16, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "nine", CurrentPrice = 50000000, DefaultMoney = 10000000, Manager = false, TimeMs = 18, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "ten", CurrentPrice = 250000000, DefaultMoney = 100000000, Manager = false, TimeMs = 20, UpgradeCount = 0 });
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }           
         }
 
         ///<summary>
         ///Database'de bulunan ilgili Improvement'ın bilgilerini günceller.
         ///</summary>
-        public bool UpdateImprovement(ConfigurationData improvement)
+        public bool UpdateImprovement(Improvement improvement)
         {
             var result = _improvementDal.Update(improvement);
             if (result != null)

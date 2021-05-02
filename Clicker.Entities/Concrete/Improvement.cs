@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Clicker.Entities.Concrete
 {
-    public class ConfigurationData : IEntity
+    public class Improvement : IEntity
     {
         public string Id { get; set; }
         public double CurrentPrice { get; set; }

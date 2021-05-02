@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\ConfiguraitonData.cs" />
-    <Compile Include="Concrete\ConfigurationData.cs" />
+    <Compile Include="Concrete\Improvement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

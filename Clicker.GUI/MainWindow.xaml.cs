@@ -22,15 +22,22 @@ namespace Clicker.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        ConfigurationDataService _configurationDataService = new ConfigurationDataService();
         ImprovementService _improvementService = new ImprovementService();
         
         public MainWindow()
         {
+            //TO-DO: İngilizce dil desteği getirilecek!
             InitializeComponent();
-            var init = _improvementService.InitConfiguration();
-            if (init)
+            var initConfigurationData = _configurationDataService.InitConfigurationData();
+            if (initConfigurationData)
             {
                 MessageBox.Show("İlk kurulum yapılıyor");
+                var initImprovement = _improvementService.InitImprovements();
+                if (initImprovement)
+                    MessageBox.Show("Kurulum başarıyla tamamlandı");
+                else
+                    MessageBox.Show("Kurulum gerçekleştirilirken bir sorunla karşılaşıldı");
             }
             frame.NavigationService.Navigate(new HomePage());
         }

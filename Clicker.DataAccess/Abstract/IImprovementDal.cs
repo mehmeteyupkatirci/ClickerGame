@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Clicker.DataAccess.Abstract
 {
-    public interface IImprovementDal : IEntityRepository<ConfigurationData>
+    public interface IImprovementDal : IEntityRepository<Improvement>
     {
     }
 }
