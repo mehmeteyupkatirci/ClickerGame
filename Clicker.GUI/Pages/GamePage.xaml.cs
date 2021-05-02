@@ -45,6 +45,13 @@ namespace Clicker.GUI.Pages
                 OneRefresh();
                 TwoRefresh();
                 ThreeRefresh();
+                FourRefresh();
+                FiveRefresh();
+                SixRefresh();
+                SevenRefresh();
+                EightRefresh();
+                NineRefresh();
+                TenRefresh();
             }
         }
 
@@ -82,7 +89,7 @@ namespace Clicker.GUI.Pages
             {
                 money = (two.UpgradeCount * two.DefaultMoney) + money;
                 MoneyWriter();
-                oneProgBar.Value = 0;
+                twoProgBar.Value = 0;
             }
         }
 
@@ -100,10 +107,128 @@ namespace Clicker.GUI.Pages
             {
                 money = (three.UpgradeCount * three.DefaultMoney) + money;
                 MoneyWriter();
-                oneProgBar.Value = 0;
+                threeProgBar.Value = 0;
             }
         }
+        private void FourRefresh()
+        {
+            fourProgBar.Value += 200;
+            fourMoneyTxt.Text = (four.UpgradeCount * four.DefaultMoney).ToString();
 
+            if (!(money >= four.CurrentPrice))
+                fourBuyButton.IsEnabled = false;
+            else
+                fourBuyButton.IsEnabled = true;
+
+            if (fourProgBar.Value >= (four.TimeMs * 1000) && four.Manager)
+            {
+                money = (four.UpgradeCount * four.DefaultMoney) + money;
+                MoneyWriter();
+                fourProgBar.Value = 0;
+            }
+        }
+        private void FiveRefresh()
+        {
+            fiveProgBar.Value += 200;
+            fiveMoneyTxt.Text = (five.UpgradeCount * five.DefaultMoney).ToString();
+
+            if (!(money >= five.CurrentPrice))
+                fiveBuyButton.IsEnabled = false;
+            else
+                fiveBuyButton.IsEnabled = true;
+
+            if (fiveProgBar.Value >= (five.TimeMs * 1000) && five.Manager)
+            {
+                money = (five.UpgradeCount * five.DefaultMoney) + money;
+                MoneyWriter();
+                fiveProgBar.Value = 0;
+            }
+        }
+        private void SixRefresh()
+        {
+            sixProgBar.Value += 200;
+            sixMoneyTxt.Text = (six.UpgradeCount * six.DefaultMoney).ToString();
+
+            if (!(money >= six.CurrentPrice))
+                sixBuyButton.IsEnabled = false;
+            else
+                sixBuyButton.IsEnabled = true;
+
+            if (sixProgBar.Value >= (six.TimeMs * 1000) && six.Manager)
+            {
+                money = (six.UpgradeCount * six.DefaultMoney) + money;
+                MoneyWriter();
+                sixProgBar.Value = 0;
+            }
+        }
+        private void SevenRefresh()
+        {
+            sevenProgBar.Value += 200;
+            sevenMoneyTxt.Text = (seven.UpgradeCount * seven.DefaultMoney).ToString();
+
+            if (!(money >= seven.CurrentPrice))
+                sevenBuyButton.IsEnabled = false;
+            else
+                sevenBuyButton.IsEnabled = true;
+
+            if (sevenProgBar.Value >= (seven.TimeMs * 1000) && seven.Manager)
+            {
+                money = (seven.UpgradeCount * seven.DefaultMoney) + money;
+                MoneyWriter();
+                sevenProgBar.Value = 0;
+            }
+        }
+        private void EightRefresh()
+        {
+            eightProgBar.Value += 200;
+            eightMoneyTxt.Text = (eight.UpgradeCount * eight.DefaultMoney).ToString();
+
+            if (!(money >= eight.CurrentPrice))
+                eightBuyButton.IsEnabled = false;
+            else
+                eightBuyButton.IsEnabled = true;
+
+            if (eightProgBar.Value >= (eight.TimeMs * 1000) && eight.Manager)
+            {
+                money = (eight.UpgradeCount * eight.DefaultMoney) + money;
+                MoneyWriter();
+                eightProgBar.Value = 0;
+            }
+        }
+        private void NineRefresh()
+        {
+            nineProgBar.Value += 200;
+            nineMoneyTxt.Text = (nine.UpgradeCount * nine.DefaultMoney).ToString();
+
+            if (!(money >= nine.CurrentPrice))
+                nineBuyButton.IsEnabled = false;
+            else
+                nineBuyButton.IsEnabled = true;
+
+            if (nineProgBar.Value >= (nine.TimeMs * 1000) && nine.Manager)
+            {
+                money = (nine.UpgradeCount * nine.DefaultMoney) + money;
+                MoneyWriter();
+                nineProgBar.Value = 0;
+            }
+        }
+        private void TenRefresh()
+        {
+            tenProgBar.Value += 200;
+            tenMoneyTxt.Text = (ten.UpgradeCount * ten.DefaultMoney).ToString();
+
+            if (!(money >= ten.CurrentPrice))
+                tenBuyButton.IsEnabled = false;
+            else
+                tenBuyButton.IsEnabled = true;
+
+            if (tenProgBar.Value >= (ten.TimeMs * 1000) && three.Manager)
+            {
+                money = (ten.UpgradeCount * ten.DefaultMoney) + money;
+                MoneyWriter();
+                tenProgBar.Value = 0;
+            }
+        }
         #endregion
 
         #region ProgressBar DoubleClicks
