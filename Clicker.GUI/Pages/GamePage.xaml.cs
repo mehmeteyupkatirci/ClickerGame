@@ -148,6 +148,42 @@ namespace Clicker.GUI.Pages
                 MessageBox.Show("Hazır değil");
             }
         }
+
+        private void fourProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void fiveProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void sixProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }       
+
+        private void sevenProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+        private void eightProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void nineProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void tenProgBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+      
         #endregion
 
         #region Buy Buttons
@@ -198,6 +234,44 @@ namespace Clicker.GUI.Pages
             {
                 MessageBox.Show(Resources["notEnoughMoney"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void fourBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void fiveBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sixBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void sevenBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void eightBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void nineBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void tenBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
         #endregion
 
