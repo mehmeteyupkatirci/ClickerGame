@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace Clicker.Entities.Concrete
 {
-    public class Improvement : IEntity
+    public class ConfigurationData : IEntity
     {
         public string Id { get; set; }
         public double CurrentPrice { get; set; }
         public int TimeMs { get; set; }
         public int UpgradeCount { get; set; }
         public bool Manager { get; set; }
+        public double DefaultMoney { get; set; }
     }
 }

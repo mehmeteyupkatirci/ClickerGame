@@ -14,19 +14,23 @@ namespace Clicker.GUI.Pages
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         ImprovementService _improvementService = new ImprovementService();
 
-        private double money = 20;
 
-        private double oneDefaultMoney = 1;
-        private double oneCurrentPrice = 10;
-
-        private double twoDefaultMoney = 5;
-        private double twoCurrentPrice = 500;
+        private double money = 0;
+        private double oneDefaultMoney, oneCurrentPrice, twoDefaultMoney, twoCurrentPrice;
 
         public GamePage()
         {
             InitializeComponent();
 
-            SetGameFromDb();
+            var one = _improvementService.GetImprovement("one");
+            oneDefaultMoney = one.DefaultMoney;
+            oneCurrentPrice = one.CurrentPrice;
+
+            var two = _improvementService.GetImprovement("two");
+            twoDefaultMoney = two.DefaultMoney;
+            twoCurrentPrice = two.CurrentPrice;
+
+            GetGameDataFromDb();
             RefreshOneProgress(_cancellationTokenSource.Token);
             RefreshTwoProgress(_cancellationTokenSource.Token);
             moneyTxt.Text = money.ToString();
@@ -35,7 +39,7 @@ namespace Clicker.GUI.Pages
         private void btnFirstPage_Click(object sender, RoutedEventArgs e)
         {
             var messageBoxResult = MessageBox.Show(Resources["back2HomePageMB"].ToString(), Resources["appFullName"].ToString(), MessageBoxButton.YesNo, MessageBoxImage.Question);
-            SetGameFromDb(true);
+            SetGameFromDb();
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 this.NavigationService.Navigate(new HomePage());
@@ -45,17 +49,19 @@ namespace Clicker.GUI.Pages
         ///<summary>
         ///Database içerisinde oyun için gerekli olan tüm bilgileri günceller. Oyunu kapatırken ya da önceki menüye dönmek istenildiğinde kullanılır.
         ///</summary>
-        public void SetGameFromDb(bool isUpdate)
+        public void SetGameFromDb()
         {
             OneSetImprovement();
+            TwoSetImprovement();
         }
 
         ///<summary>
         ///Database'den oyun için gerekli olan tüm bilgileri getirir. Bu bilgiler sayesinde oyunda kullanılacak olan ve en son kayıt edilmiş bilgiler getirilir. Oyun ekranının constructor'ında çağırılması yeterlidir.
         ///</summary>
-        public void SetGameFromDb()
+        public void GetGameDataFromDb()
         {
             OneGetImprovement();
+            TwoGetImprovement();
         }
 
         private void OneGetImprovement()
@@ -68,21 +74,38 @@ namespace Clicker.GUI.Pages
             oneProgBar.Maximum = improvement.TimeMs * 1000;
             oneDurationTxt.Text = $"00:00:0{improvement.TimeMs}";
             oneMoneyTxt.Text = (Convert.ToDouble(oneUpgradeCountTxt.Text) * oneDefaultMoney).ToString();
-            twoProgBar.Maximum = 10000;
-            twoUpgradeCountTxt.Text = 3.ToString();
         }
+
+        private void TwoGetImprovement()
+        {
+            var improvement = _improvementService.GetImprovement("two");
+            twoUpgradeCountTxt.Text = improvement.UpgradeCount.ToString();
+            twoCurrentPrice = improvement.CurrentPrice;
+            twoProgBar.Maximum = improvement.TimeMs * 1000;
+            twoDurationTxt.Text = $"00:00:0{improvement.TimeMs}";
+            twoMoneyTxt.Text = (Convert.ToDouble(twoUpgradeCountTxt.Text) * twoDefaultMoney).ToString();
+        }
+
 
         private void OneSetImprovement()
         {
-            var improvement = _improvementService.GetImprovement("one");
-            improvement.CurrentPrice = oneCurrentPrice;
-            improvement.UpgradeCount = Convert.ToInt32(oneUpgradeCountTxt.Text);
-            _improvementService.UpdateImprovement(improvement);
+            var one = _improvementService.GetImprovement("one");
+            one.CurrentPrice = oneCurrentPrice;
+            one.UpgradeCount = Convert.ToInt32(oneUpgradeCountTxt.Text);
+            _improvementService.UpdateImprovement(one);
+        }
+
+        private void TwoSetImprovement()
+        {
+            var two = _improvementService.GetImprovement("two");
+            two.CurrentPrice = twoCurrentPrice;
+            two.UpgradeCount = Convert.ToInt32(twoUpgradeCountTxt.Text);
+            _improvementService.UpdateImprovement(two);
         }
 
         public async void RefreshOneProgress(CancellationToken cancellationToken)
         {
-            while (!cancellationToken.IsCancellationRequested)
+            while (true)
             {
                 await Task.Delay(200);
                 oneProgBar.Value += 200;

@@ -16,7 +16,7 @@ namespace Clicker.DataAccess.Concrete.EntityFramework
             Database.SetInitializer<IdleClickerContext>(null);
         }
 
-        public DbSet<Improvement> Improvements { get; set; }
+        public DbSet<ConfigurationData> Improvements { get; set; }
         public DbSet<ConfigurationData> ConfigurationDatas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

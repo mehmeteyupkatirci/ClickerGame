@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Clicker.DataAccess.Concrete.EntityFramework.Mappings
 {
-    public class ImprovementMap : EntityTypeConfiguration<Improvement>
+    public class ImprovementMap : EntityTypeConfiguration<ConfigurationData>
     {
         public ImprovementMap()
         {
@@ -20,6 +20,7 @@ namespace Clicker.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.TimeMs).HasColumnName("time_ms");
             Property(x => x.UpgradeCount).HasColumnName("upgrade_count");
             Property(x => x.Manager).HasColumnName("manager");
+            Property(x => x.DefaultMoney).HasColumnName("default_money");
         }
     }
 }

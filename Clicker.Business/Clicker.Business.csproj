@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IConfigurationDataService.cs" />
     <Compile Include="Abstract\IImprovementService.cs" />
+    <Compile Include="Concrete\ConfigurationDataService.cs" />
     <Compile Include="Concrete\ImprovementService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

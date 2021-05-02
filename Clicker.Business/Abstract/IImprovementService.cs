@@ -9,11 +9,11 @@ namespace Clicker.Business.Abstract
 {
     public interface IImprovementService
     {
-        bool InitConfiguration();
-        List<Improvement> ImprovementList();
-        Improvement GetImprovement(string improvementId);
-        bool UpdateImprovement(Improvement improvement);
-        void DeleteImprovement(Improvement improvement);
-        bool AddImprovement(Improvement improvement);
+        bool InitImprovements();
+        List<ConfigurationData> ImprovementList();
+        ConfigurationData GetImprovement(string improvementId);
+        bool UpdateImprovement(ConfigurationData improvement);
+        void DeleteImprovement(ConfigurationData improvement);
+        bool AddImprovement(ConfigurationData improvement);
     }
 }
