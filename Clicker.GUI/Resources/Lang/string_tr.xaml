@@ -12,5 +12,6 @@
     <system:String x:Key="shortSecond">sn</system:String>
     <system:String x:Key="go2shop">Mağazaya Git</system:String>
     <system:String x:Key="back2game">Oyuna Dön</system:String>
+    <system:String x:Key="deleteGame">Oyunu Sil</system:String>
     
 </ResourceDictionary>

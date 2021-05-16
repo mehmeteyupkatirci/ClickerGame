@@ -11,7 +11,8 @@
         <ResourceDictionary Source="../Resources/Lang/string_tr.xaml"/>
     </Page.Resources>
     <Grid Background="#27527B">
-        <Button Name="btnFirstPage" Width="150" Height="75" Content="{DynamicResource back2HomePage}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnFirstPage_Click"></Button>
+        <Button Name="btnFirstPage" Width="150" Height="75" Content="{DynamicResource back2HomePage}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnFirstPage_Click"/>
+        <Button Name="btnDeleteAllRecords" Width="150" Height="75" Content="{DynamicResource deleteGame}" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnDeleteAllRecords_Click"/>
         <Label Content="SETTINGS PAGE" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="60"></Label>
     </Grid>
 </Page>

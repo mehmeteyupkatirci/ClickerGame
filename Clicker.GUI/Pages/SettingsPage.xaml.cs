@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clicker.Business.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace Clicker.GUI.Pages
     /// </summary>
     public partial class SettingsPage : Page
     {
+        ImprovementService _improvementService = new ImprovementService();
+
         public SettingsPage()
         {
             InitializeComponent();
@@ -27,6 +30,15 @@ namespace Clicker.GUI.Pages
         private void btnFirstPage_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HomePage());
+        }
+
+        private void btnDeleteAllRecords_Click(object sender, RoutedEventArgs e)
+        {
+            var result = _improvementService.DeleteAllImprovement();
+            if (!result)
+            {
+                _improvementService.DeleteAllImprovement();
+            }
         }
     }
 }

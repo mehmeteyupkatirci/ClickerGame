@@ -14,6 +14,7 @@ namespace Clicker.Business.Abstract
         Improvement GetImprovement(string improvementId);
         bool UpdateImprovement(Improvement improvement);
         void DeleteImprovement(Improvement improvement);
+        bool DeleteAllImprovement();
         bool AddImprovement(Improvement improvement);
     }
 }

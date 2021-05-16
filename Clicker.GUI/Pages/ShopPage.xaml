@@ -50,16 +50,16 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+                    <Button Name="btnOneMenajer" Click="btnOneMenajer_Click" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" />
+                    <Button Name="btnTwoMenajer" Click="btnTwoMenajer_Click" Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
+                    <Button Name="btnTreeMenajer" Click="btnTreeMenajer_Click" Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
+                    <Button Name="btnFourMenajer" Click="btnFourMenajer_Click" Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
+                    <Button Name="btnFiveMenajer" Click="btnFiveMenajer_Click" Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
+                    <Button Name="btnSixMenajer" Click="btnSixMenajer_Click" Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
+                    <Button Name="btnSevenMenajer" Click="btnSevenMenajer_Click" Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
+                    <Button Name="btnEightMenajer" Click="btnEightMenajer_Click" Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
+                    <Button Name="btnNineMenajer" Click="btnNineMenajer_Click" Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
+                    <Button Name="btnTenMenajer" Click="btnTenMenajer_Click" Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
                 </Grid>
             </TabItem>
             <TabItem Width="265" Height="30">
@@ -87,16 +87,16 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+                    <Button Click="btnOnePrice_Click" Name="btnOnePrice" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
+                    <Button Click="btnTwoPrice_Click" Name="btnTwoPrice" Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
+                    <Button Click="btnTreePrice_Click" Name="btnTreePrice" Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
+                    <Button Click="btnFourPrice_Click" Name="btnFourPrice" Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
+                    <Button Click="btnFivePrice_Click" Name="btnFivePrice" Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
+                    <Button Click="btnSixPrice_Click" Name="btnSixPrice" Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
+                    <Button Click="btnSevenPrice_Click" Name="btnSevenPrice" Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
+                    <Button Click="btnEightPrice_Click" Name="btnEightPrice" Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
+                    <Button Click="btnNinePrice_Click" Name="btnNinePrice" Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
+                    <Button Click="btnTenPrice_Click" Name="btnTenPrice" Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
                 </Grid>
             </TabItem>
             <TabItem Width="265" Height="30">
@@ -124,30 +124,18 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
-                    <Button Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
-                    <Button Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+                    <Button Click="btnOneTime_Click" Name="btnOneTime" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
+                    <Button Click="btnTwoTime_Click" Name="btnTwoTime" Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
+                    <Button Click="btnTreeTime_Click" Name="btnTreeTime" Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
+                    <Button Click="btnFourTime_Click" Name="btnFourTime" Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
+                    <Button Click="btnFiveTime_Click" Name="btnFiveTime" Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
+                    <Button Click="btnSixTime_Click" Name="btnSixTime" Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
+                    <Button Click="btnSevenTime_Click" Name="btnSevenTime" Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
+                    <Button Click="btnEightTime_Click" Name="btnEightTime" Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
+                    <Button Click="btnNineTime_Click" Name="btnNineTime" Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
+                    <Button Click="btnTenTime_Click" Name="btnTenTime" Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
                 </Grid>
             </TabItem>
         </TabControl>
-        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">
-            <StackPanel Margin="55,0">
-                <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
-            </StackPanel>
-            <StackPanel Margin="55,0">
-                <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
-            </StackPanel>
-            <StackPanel Margin="55,0">
-                <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
-            </StackPanel>
-        </StackPanel>-->
-        
     </Grid>
 </Page>

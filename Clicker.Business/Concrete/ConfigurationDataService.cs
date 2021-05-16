@@ -44,14 +44,33 @@ namespace Clicker.Business.Concrete
         ///<summary>
         ///Oyun ilk defa yükleniyorsa database'de bulunması gereken kayıtlar ve configuration bilgilerini oluşturmak için program çalıştırıldıktan sonra 1 kez çağırılır.
         ///</summary>
-        public bool InitConfigurationData()
+        public bool InitImprovementsData()
         {
             var isFirstOpen = _configurationDataDal.Get(x => x.Key == "firstLoad");
             if (isFirstOpen == null)
             {
                 _configurationDataDal.Add(new ConfigurationData { Key = "firstLoad", Value = "done" });
                 _configurationDataDal.Add(new ConfigurationData { Key = "money", Value = "0" });
+                return true;
+            }
+            else if (isFirstOpen.Value == "deleted")
+            {
+                _configurationDataDal.Update(new ConfigurationData { Key = "firstLoad", Value = "done" });
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
+        public bool DeleteImprovementsData()
+        {
+            var isFirstOpen = _configurationDataDal.Get(x => x.Key == "firstLoad");
+            if (isFirstOpen == null)
+            {
+                _configurationDataDal.Update(new ConfigurationData { Key = "firstLoad", Value = "deleted" });
+                _configurationDataDal.Update(new ConfigurationData { Key = "money", Value = "0" });
                 return true;
             }
             else

@@ -38,6 +38,23 @@ namespace Clicker.Business.Concrete
         }
 
         ///<summary>
+        ///Database'deki bütün Improvement bilgilerini siler.
+        ///</summary>
+        public bool DeleteAllImprovement()
+        {
+            try
+            {
+                var deletelist = ImprovementList();
+                deletelist.ForEach(x => _improvementDal.Delete(x));
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;                
+            }         
+        }
+
+        ///<summary>
         ///Database'den ilgili Improvement bilgilerini getirir.
         ///</summary>
         public Improvement GetImprovement(string improvementId)
