@@ -26,119 +26,190 @@ namespace Clicker.GUI.Pages
         ConfigurationDataService _configurationDataService = new ConfigurationDataService();
 
         private Improvement one, two, three, four, five, six, seven, eight, nine, ten;
+        private double money = 0;
+
         public ShopPage()
         {
             InitializeComponent();
             GetAllImprovement();
+            BuyEvent();
+        }
+
+        private void BuyEvent()
+        {
+            MoneyWriter();
             MenajerToggles();
+            PriceToggles();
+            TimeToggles();
         }
 
         private void btnGamePage_Click(object sender, RoutedEventArgs e)
         {
+            SetAllImrpovement();
             this.NavigationService.Navigate(new GamePage());
         }
 
         #region Menajer
         private void btnOneMenajer_Click(object sender, RoutedEventArgs e)
         {
-          
+            money -= one.ManagerCost;
+            BuyEvent();
+            one.Manager = true;
+            btnOneMenajer.IsEnabled = false;
         }
 
         private void btnTwoMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= two.ManagerCost;
+            BuyEvent();
+            two.Manager = true;
+            btnTwoMenajer.IsEnabled = false;
         }
 
         private void btnTreeMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= three.ManagerCost;
+            BuyEvent();
+            three.Manager = true;
+            btnTreeMenajer.IsEnabled = false;
         }
 
         private void btnFourMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= four.ManagerCost;
+            BuyEvent();
+            four.Manager = true;
+            btnFourMenajer.IsEnabled = false;
         }
 
         private void btnFiveMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= five.ManagerCost;
+            BuyEvent();
+            five.Manager = true;
+            btnFiveMenajer.IsEnabled = false;
         }
 
         private void btnSixMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= six.ManagerCost;
+            BuyEvent();
+            six.Manager = true;
+            btnSixMenajer.IsEnabled = false;
         }
 
         private void btnSevenMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= seven.ManagerCost;
+            BuyEvent();
+            seven.Manager = true;
+            btnSevenMenajer.IsEnabled = false;
         }
 
         private void btnEightMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= eight.ManagerCost;
+            BuyEvent();
+            eight.Manager = true;
+            btnEightMenajer.IsEnabled = false;
         }
 
         private void btnNineMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= nine.ManagerCost;
+            BuyEvent();
+            nine.Manager = true;
+            btnNineMenajer.IsEnabled = false;
         }
 
         private void btnTenMenajer_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= ten.ManagerCost;
+            BuyEvent();
+            ten.Manager = true;
+            btnTenMenajer.IsEnabled = false;
         }
         #endregion
 
         #region Price
         private void btnOnePrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= one.PriceCost;
+            one.PriceCost = one.PriceCost * 3;
+            BuyEvent();
+            one.DefaultMoney = one.DefaultMoney*2;
         }
 
         private void btnTwoPrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= two.PriceCost;
+            two.PriceCost = two.PriceCost * 3;
+            BuyEvent();
+            two.DefaultMoney = two.DefaultMoney * 2;
         }
 
         private void btnTreePrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= three.PriceCost;
+            three.PriceCost = three.PriceCost * 3;
+            BuyEvent();
+            three.DefaultMoney = three.DefaultMoney * 2;
         }
 
         private void btnFourPrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= four.PriceCost;
+            four.PriceCost = four.PriceCost * 3;
+            BuyEvent();
+            four.DefaultMoney = four.DefaultMoney * 2;
         }
 
         private void btnFivePrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= five.PriceCost;
+            five.PriceCost = five.PriceCost * 3;
+            BuyEvent();
+            five.DefaultMoney = five.DefaultMoney * 2;
         }
 
         private void btnSixPrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= six.PriceCost;
+            six.PriceCost = six.PriceCost * 3;
+            BuyEvent();
+            six.DefaultMoney = six.DefaultMoney * 2;
         }
 
         private void btnSevenPrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= seven.PriceCost;
+            seven.PriceCost = seven.PriceCost * 3;
+            BuyEvent();
+            seven.DefaultMoney = seven.DefaultMoney * 2;
         }
 
         private void btnEightPrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= eight.PriceCost;
+            eight.PriceCost = eight.PriceCost * 3;
+            BuyEvent();
+            eight.DefaultMoney = eight.DefaultMoney * 2;
         }
 
         private void btnNinePrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= nine.PriceCost;
+            nine.PriceCost = nine.PriceCost * 3;
+            BuyEvent();
+            nine.DefaultMoney = nine.DefaultMoney * 2;
         }
 
         private void btnTenPrice_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= ten.PriceCost;
+            ten.PriceCost = ten.PriceCost * 3;
+            BuyEvent();
+            ten.DefaultMoney = ten.DefaultMoney * 2;
         }
 
         #endregion
@@ -196,8 +267,13 @@ namespace Clicker.GUI.Pages
         #endregion
 
         #region Helpers
+        private void MoneyWriter()
+        {
+            moneyTxt.Text = Math.Round(money, 1).ToString();
+        }
         private void GetAllImprovement()
         {
+            money = Convert.ToDouble(_configurationDataService.GetConfigurationData("money").Value);
             one = _improvementService.GetImprovement("one");
             two = _improvementService.GetImprovement("two");
             three = _improvementService.GetImprovement("three");
@@ -212,6 +288,7 @@ namespace Clicker.GUI.Pages
 
         private void SetAllImrpovement()
         {
+            Convert.ToDouble(_configurationDataService.UpdateConfigurationData("money", money.ToString()));
             _improvementService.UpdateImprovement(one);
             _improvementService.UpdateImprovement(two);
             _improvementService.UpdateImprovement(three);
@@ -226,26 +303,98 @@ namespace Clicker.GUI.Pages
 
         private void MenajerToggles()
         {
-            if (one.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (two.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (three.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (four.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (five.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (six.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (seven.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (eight.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (nine.Manager)
-                btnOneMenajer.IsEnabled = false;
-            else if (ten.Manager)
-                btnOneMenajer.IsEnabled = false;
+            if (!one.Manager && money > one.ManagerCost)
+                btnOneMenajer.IsEnabled = true;
+            if (!two.Manager && money > two.ManagerCost)
+                btnTwoMenajer.IsEnabled = true;
+            if (!three.Manager && money > three.ManagerCost)
+                btnTreeMenajer.IsEnabled = true;
+            if (!four.Manager && money > four.ManagerCost)
+                btnFourMenajer.IsEnabled = true;
+            if (!five.Manager && money > five.ManagerCost)
+                btnFiveMenajer.IsEnabled = true;
+            if (!six.Manager && money > six.ManagerCost)
+                btnSixMenajer.IsEnabled = true;
+            if (!seven.Manager && money > seven.ManagerCost)
+                btnSevenMenajer.IsEnabled = true;
+            if (!eight.Manager && money > eight.ManagerCost)
+                btnEightMenajer.IsEnabled = true;
+            if (!nine.Manager && money > nine.ManagerCost)
+                btnNineMenajer.IsEnabled = true;
+            if (!ten.Manager && money > ten.ManagerCost)
+                btnTenMenajer.IsEnabled = true;
+        }
+        private void PriceToggles()
+        {
+            if (money > one.PriceCost)
+                btnOnePrice.IsEnabled = true;
+            else
+                btnOnePrice.IsEnabled = false;
+            if (money > two.PriceCost)
+                btnTwoPrice.IsEnabled = true;
+            else
+                btnTwoPrice.IsEnabled = false;
+            if (money > three.PriceCost)
+                btnTreePrice.IsEnabled = true;
+            else
+                btnTreePrice.IsEnabled = false;
+            if (money > four.PriceCost)
+                btnFourPrice.IsEnabled = true;
+            else
+                btnFourPrice.IsEnabled = false;
+
+            if (money > five.PriceCost)
+                btnFivePrice.IsEnabled = true;
+            else
+                btnFivePrice.IsEnabled = false;
+
+            if (money > six.PriceCost)
+                btnSixPrice.IsEnabled = true;
+            else
+                btnSixPrice.IsEnabled = false;
+
+            if (money > seven.PriceCost)
+                btnSevenPrice.IsEnabled = true;
+            else
+                btnSevenPrice.IsEnabled = false;
+
+            if (money > eight.PriceCost)
+                btnEightPrice.IsEnabled = true;
+            else
+                btnEightPrice.IsEnabled = false;
+
+            if (money > nine.PriceCost)
+                btnNinePrice.IsEnabled = true;
+            else
+                btnNinePrice.IsEnabled = false;
+
+            if (money > ten.PriceCost)
+                btnTenPrice.IsEnabled = true;
+            else
+                btnTenPrice.IsEnabled = false;
+        }
+        private void TimeToggles()
+        {
+            if (money > one.TimeCost)
+                btnOneTime.IsEnabled = true;
+            if (money > two.TimeCost)
+                btnTwoTime.IsEnabled = true;
+            if (money > three.TimeCost)
+                btnTreeTime.IsEnabled = true;
+            if (money > four.TimeCost)
+                btnFourTime.IsEnabled = true;
+            if (money > five.TimeCost)
+                btnFiveTime.IsEnabled = true;
+            if (money > six.TimeCost)
+                btnSixTime.IsEnabled = true;
+            if (money > seven.TimeCost)
+                btnSevenTime.IsEnabled = true;
+            if (money > eight.TimeCost)
+                btnEightTime.IsEnabled = true;
+            if (money > nine.TimeCost)
+                btnNineTime.IsEnabled = true;
+            if (money > ten.TimeCost)
+                btnTenTime.IsEnabled = true;
         }
         #endregion
     }

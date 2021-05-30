@@ -21,6 +21,9 @@ namespace Clicker.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.UpgradeCount).HasColumnName("upgrade_count");
             Property(x => x.Manager).HasColumnName("manager");
             Property(x => x.DefaultMoney).HasColumnName("default_money");
+            Property(x => x.ManagerCost).HasColumnName("manager_cost");
+            Property(x => x.PriceCost).HasColumnName("price_cost");
+            Property(x => x.TimeCost).HasColumnName("time_cost");
         }
     }
 }

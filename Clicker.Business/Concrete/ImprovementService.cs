@@ -77,16 +77,16 @@ namespace Clicker.Business.Concrete
         {
             try
             {
-                _improvementDal.Add(new Improvement() { Id = "one", CurrentPrice = 10, DefaultMoney = 1, Manager = true, TimeMs = 2, UpgradeCount = 1 });
-                _improvementDal.Add(new Improvement() { Id = "two", CurrentPrice = 50, DefaultMoney = 5, Manager = false, TimeMs = 4, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "three", CurrentPrice = 1000, DefaultMoney = 30, Manager = false, TimeMs = 6, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "four", CurrentPrice = 5000, DefaultMoney = 100, Manager = false, TimeMs = 8, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "five", CurrentPrice = 30000, DefaultMoney = 1000, Manager = false, TimeMs = 10, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "six", CurrentPrice = 100000, DefaultMoney = 5000, Manager = false, TimeMs = 12, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "seven", CurrentPrice = 1000000, DefaultMoney = 50000, Manager = false, TimeMs = 14, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "eight", CurrentPrice = 10000000, DefaultMoney = 1000000, Manager = false, TimeMs = 16, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "nine", CurrentPrice = 50000000, DefaultMoney = 10000000, Manager = false, TimeMs = 18, UpgradeCount = 0 });
-                _improvementDal.Add(new Improvement() { Id = "ten", CurrentPrice = 250000000, DefaultMoney = 100000000, Manager = false, TimeMs = 20, UpgradeCount = 0 });
+                _improvementDal.Add(new Improvement() { Id = "one", CurrentPrice = 10, DefaultMoney = 1, Manager = true, TimeMs = 2, UpgradeCount = 1, ManagerCost = 100, TimeCost = 100, PriceCost = 100 });
+                _improvementDal.Add(new Improvement() { Id = "two", CurrentPrice = 50, DefaultMoney = 5, Manager = false, TimeMs = 4, UpgradeCount = 0, ManagerCost = 500, TimeCost = 500, PriceCost = 500 });
+                _improvementDal.Add(new Improvement() { Id = "three", CurrentPrice = 1000, DefaultMoney = 30, Manager = false, TimeMs = 6, UpgradeCount = 0, ManagerCost = 1000, TimeCost = 1000, PriceCost = 1000 });
+                _improvementDal.Add(new Improvement() { Id = "four", CurrentPrice = 5000, DefaultMoney = 100, Manager = false, TimeMs = 8, UpgradeCount = 0 , ManagerCost = 5000, TimeCost = 5000, PriceCost = 5000 });
+                _improvementDal.Add(new Improvement() { Id = "five", CurrentPrice = 30000, DefaultMoney = 1000, Manager = false, TimeMs = 10, UpgradeCount = 0, ManagerCost = 10000, TimeCost = 10000, PriceCost = 10000 });
+                _improvementDal.Add(new Improvement() { Id = "six", CurrentPrice = 100000, DefaultMoney = 5000, Manager = false, TimeMs = 12, UpgradeCount = 0, ManagerCost = 50000, TimeCost = 50000, PriceCost = 50000 });
+                _improvementDal.Add(new Improvement() { Id = "seven", CurrentPrice = 1000000, DefaultMoney = 50000, Manager = false, TimeMs = 14, UpgradeCount = 0, ManagerCost = 100000, TimeCost = 100000, PriceCost = 100000 });
+                _improvementDal.Add(new Improvement() { Id = "eight", CurrentPrice = 10000000, DefaultMoney = 1000000, Manager = false, TimeMs = 16, UpgradeCount = 0, ManagerCost = 500000, TimeCost = 500000, PriceCost = 500000 });
+                _improvementDal.Add(new Improvement() { Id = "nine", CurrentPrice = 50000000, DefaultMoney = 10000000, Manager = false, TimeMs = 18, UpgradeCount = 0, ManagerCost = 1000000, TimeCost = 1000000, PriceCost = 1000000 });
+                _improvementDal.Add(new Improvement() { Id = "ten", CurrentPrice = 250000000, DefaultMoney = 100000000, Manager = false, TimeMs = 20, UpgradeCount = 0, ManagerCost = 5000000, TimeCost = 5000000, PriceCost = 5000000 });
                 return true;
             }
             catch (Exception)

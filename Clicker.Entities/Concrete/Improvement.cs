@@ -15,5 +15,8 @@ namespace Clicker.Entities.Concrete
         public int UpgradeCount { get; set; }
         public bool Manager { get; set; }
         public double DefaultMoney { get; set; }
+        public double ManagerCost { get; set; }
+        public double TimeCost { get; set; }
+        public double PriceCost { get; set; }
     }
 }
