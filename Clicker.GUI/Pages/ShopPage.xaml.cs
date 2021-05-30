@@ -217,52 +217,82 @@ namespace Clicker.GUI.Pages
         #region Times
         private void btnOneTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= one.TimeCost;
+            one.TimeCost = one.TimeCost * 3;
+            one.TimeMs = one.TimeMs - 0.2;
+            BuyEvent();
         }
 
         private void btnTwoTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= two.TimeCost;
+            two.TimeCost = two.TimeCost * 3;
+            two.TimeMs = two.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnTreeTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= three.TimeCost;
+            three.TimeCost = three.TimeCost * 3;
+            three.TimeMs = three.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnFourTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= four.TimeCost;
+            four.TimeCost = four.TimeCost * 3;
+            four.TimeMs = four.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnFiveTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= five.TimeCost;
+            five.TimeCost = five.TimeCost * 3;
+            five.TimeMs = five.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnSixTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= six.TimeCost;
+            six.TimeCost = six.TimeCost * 3;
+            six.TimeMs = six.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnSevenTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= seven.TimeCost;
+            seven.TimeCost = seven.TimeCost * 3;
+            seven.TimeMs = seven.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnEightTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= eight.TimeCost;
+            eight.TimeCost = eight.TimeCost * 3;
+            eight.TimeMs = eight.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnNineTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= nine.TimeCost;
+            nine.TimeCost = nine.TimeCost * 3;
+            nine.TimeMs = nine.TimeMs - 0.8;
+            BuyEvent();
         }
 
         private void btnTenTime_Click(object sender, RoutedEventArgs e)
         {
-
+            money -= ten.TimeCost;
+            ten.TimeCost = ten.TimeCost * 3;
+            ten.TimeMs = ten.TimeMs - 0.8;
+            BuyEvent();
         }
         #endregion
 
@@ -375,26 +405,46 @@ namespace Clicker.GUI.Pages
         }
         private void TimeToggles()
         {
-            if (money > one.TimeCost)
+            if (money > one.TimeCost && one.TimeMs >= 1)
                 btnOneTime.IsEnabled = true;
-            if (money > two.TimeCost)
+            else
+                btnOneTime.IsEnabled = false;
+            if (money > two.TimeCost && two.TimeMs >= 2)
                 btnTwoTime.IsEnabled = true;
-            if (money > three.TimeCost)
+            else
+                btnTwoTime.IsEnabled = false;
+            if (money > three.TimeCost && three.TimeMs > 1)
                 btnTreeTime.IsEnabled = true;
-            if (money > four.TimeCost)
+            else
+                btnTreeTime.IsEnabled = false;
+            if (money > four.TimeCost && four.TimeMs > 1)
                 btnFourTime.IsEnabled = true;
-            if (money > five.TimeCost)
+            else
+                btnFourTime.IsEnabled = false;
+            if (money > five.TimeCost && five.TimeMs > 1)
                 btnFiveTime.IsEnabled = true;
-            if (money > six.TimeCost)
+            else
+                btnFiveTime.IsEnabled = false;
+            if (money > six.TimeCost && six.TimeMs > 1)
                 btnSixTime.IsEnabled = true;
-            if (money > seven.TimeCost)
+            else
+                btnSixTime.IsEnabled = false;
+            if (money > seven.TimeCost && seven.TimeMs > 1)
                 btnSevenTime.IsEnabled = true;
-            if (money > eight.TimeCost)
+            else
+                btnSevenTime.IsEnabled = false;
+            if (money > eight.TimeCost && eight.TimeMs > 1)
                 btnEightTime.IsEnabled = true;
-            if (money > nine.TimeCost)
+            else
+                btnEightTime.IsEnabled = false;
+            if (money > nine.TimeCost && nine.TimeMs > 1)
                 btnNineTime.IsEnabled = true;
-            if (money > ten.TimeCost)
+            else
+                btnNineTime.IsEnabled = false;
+            if (money > ten.TimeCost && ten.TimeMs > 1)
                 btnTenTime.IsEnabled = true;
+            else
+                btnTenTime.IsEnabled = false;
         }
         #endregion
     }
