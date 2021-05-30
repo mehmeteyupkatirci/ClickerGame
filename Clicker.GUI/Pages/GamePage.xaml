@@ -48,7 +48,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                        <Image Width="43" Height="43" Source="..\Resources\Icons\TeamLogos\Haas.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="oneUpgradeCountTxt" Text="ONE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>

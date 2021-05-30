@@ -53,33 +53,33 @@ namespace Clicker.GUI.Pages
         private void btnOneMenajer_Click(object sender, RoutedEventArgs e)
         {
             money -= one.ManagerCost;
-            BuyEvent();
             one.Manager = true;
             btnOneMenajer.IsEnabled = false;
+            BuyEvent();
         }
 
         private void btnTwoMenajer_Click(object sender, RoutedEventArgs e)
         {
             money -= two.ManagerCost;
-            BuyEvent();
             two.Manager = true;
             btnTwoMenajer.IsEnabled = false;
+            BuyEvent();
         }
 
         private void btnTreeMenajer_Click(object sender, RoutedEventArgs e)
         {
             money -= three.ManagerCost;
-            BuyEvent();
             three.Manager = true;
             btnTreeMenajer.IsEnabled = false;
+            BuyEvent();
         }
 
         private void btnFourMenajer_Click(object sender, RoutedEventArgs e)
         {
             money -= four.ManagerCost;
-            BuyEvent();
             four.Manager = true;
             btnFourMenajer.IsEnabled = false;
+            BuyEvent();
         }
 
         private void btnFiveMenajer_Click(object sender, RoutedEventArgs e)
@@ -409,7 +409,7 @@ namespace Clicker.GUI.Pages
                 btnOneTime.IsEnabled = true;
             else
                 btnOneTime.IsEnabled = false;
-            if (money > two.TimeCost && two.TimeMs >= 2)
+            if (money > two.TimeCost && two.TimeMs >= 1)
                 btnTwoTime.IsEnabled = true;
             else
                 btnTwoTime.IsEnabled = false;
