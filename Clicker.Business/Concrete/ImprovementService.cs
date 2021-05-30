@@ -44,7 +44,7 @@ namespace Clicker.Business.Concrete
         {
             try
             {
-                var deletelist = ImprovementList();
+                var deletelist = ImprovementList(); 
                 deletelist.ForEach(x => _improvementDal.Delete(x));
                 return true;
             }

@@ -44,7 +44,7 @@ namespace Clicker.Business.Concrete
         ///<summary>
         ///Oyun ilk defa yükleniyorsa database'de bulunması gereken kayıtlar ve configuration bilgilerini oluşturmak için program çalıştırıldıktan sonra 1 kez çağırılır.
         ///</summary>
-        public bool InitImprovementsData()
+        public bool InitConfigurationData()
         {
             var isFirstOpen = _configurationDataDal.Get(x => x.Key == "firstLoad");
             if (isFirstOpen == null)
@@ -64,16 +64,19 @@ namespace Clicker.Business.Concrete
             }
         }
 
-        public bool DeleteImprovementsData()
+        /// <summary>
+        /// Oyunu baştan başlatmak için çağırılır
+        /// </summary>
+        /// <returns></returns>
+        public bool DeleteAllConfiguraitonsData()
         {
-            var isFirstOpen = _configurationDataDal.Get(x => x.Key == "firstLoad");
-            if (isFirstOpen == null)
+            try
             {
-                _configurationDataDal.Update(new ConfigurationData { Key = "firstLoad", Value = "deleted" });
-                _configurationDataDal.Update(new ConfigurationData { Key = "money", Value = "0" });
+                var deleteList = ConfigurationDataList();
+                deleteList.ForEach(x => _configurationDataDal.Delete(x));
                 return true;
             }
-            else
+            catch (Exception)
             {
                 return false;
             }

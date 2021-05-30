@@ -9,8 +9,8 @@ namespace Clicker.Business.Abstract
 {
     public interface IConfigurationDataService
     {
-        bool InitImprovementsData();
-        bool DeleteImprovementsData();
+        bool InitConfigurationData();
+        bool DeleteAllConfiguraitonsData();
         List<ConfigurationData> ConfigurationDataList();
         ConfigurationData GetConfigurationData(string key);
         bool UpdateConfigurationData(string key, string value);

@@ -65,8 +65,8 @@ namespace Clicker.GUI.Pages
 
         private void OneRefresh()
         {
-            oneProgBar.Value += 200;
-            oneMoneyTxt.Text = (one.UpgradeCount * one.DefaultMoney).ToString();
+            if (one.UpgradeCount > 0)
+                oneProgBar.Value += 200;
 
             if (!(money >= one.CurrentPrice))
                 oneBuyButton.IsEnabled = false;
@@ -83,8 +83,8 @@ namespace Clicker.GUI.Pages
 
         private void TwoRefresh()
         {
-            twoProgBar.Value += 200;
-            twoMoneyTxt.Text = (two.UpgradeCount * two.DefaultMoney).ToString();
+            if (two.UpgradeCount > 0)
+                twoProgBar.Value += 200;
 
             if (!(money >= two.CurrentPrice))
                 twoBuyButton.IsEnabled = false;
@@ -101,8 +101,8 @@ namespace Clicker.GUI.Pages
 
         private void ThreeRefresh()
         {
-            threeProgBar.Value += 200;
-            threeMoneyTxt.Text = (three.UpgradeCount * three.DefaultMoney).ToString();
+            if(three.UpgradeCount > 0)
+                threeProgBar.Value += 200;
 
             if (!(money >= three.CurrentPrice))
                 threeBuyButton.IsEnabled = false;
@@ -118,8 +118,8 @@ namespace Clicker.GUI.Pages
         }
         private void FourRefresh()
         {
-            fourProgBar.Value += 200;
-            fourMoneyTxt.Text = (four.UpgradeCount * four.DefaultMoney).ToString();
+            if(four.UpgradeCount > 0)
+                fourProgBar.Value += 200;
 
             if (!(money >= four.CurrentPrice))
                 fourBuyButton.IsEnabled = false;
@@ -135,8 +135,8 @@ namespace Clicker.GUI.Pages
         }
         private void FiveRefresh()
         {
-            fiveProgBar.Value += 200;
-            fiveMoneyTxt.Text = (five.UpgradeCount * five.DefaultMoney).ToString();
+            if(five.UpgradeCount > 0)
+                fiveProgBar.Value += 200;
 
             if (!(money >= five.CurrentPrice))
                 fiveBuyButton.IsEnabled = false;
@@ -152,8 +152,8 @@ namespace Clicker.GUI.Pages
         }
         private void SixRefresh()
         {
-            sixProgBar.Value += 200;
-            sixMoneyTxt.Text = (six.UpgradeCount * six.DefaultMoney).ToString();
+            if(six.UpgradeCount > 0)
+                sixProgBar.Value += 200;
 
             if (!(money >= six.CurrentPrice))
                 sixBuyButton.IsEnabled = false;
@@ -169,8 +169,8 @@ namespace Clicker.GUI.Pages
         }
         private void SevenRefresh()
         {
-            sevenProgBar.Value += 200;
-            sevenMoneyTxt.Text = (seven.UpgradeCount * seven.DefaultMoney).ToString();
+            if(seven.UpgradeCount > 0)
+                sevenProgBar.Value += 200;
 
             if (!(money >= seven.CurrentPrice))
                 sevenBuyButton.IsEnabled = false;
@@ -186,8 +186,8 @@ namespace Clicker.GUI.Pages
         }
         private void EightRefresh()
         {
-            eightProgBar.Value += 200;
-            eightMoneyTxt.Text = (eight.UpgradeCount * eight.DefaultMoney).ToString();
+            if(eight.UpgradeCount > 0)
+                eightProgBar.Value += 200;
 
             if (!(money >= eight.CurrentPrice))
                 eightBuyButton.IsEnabled = false;
@@ -203,8 +203,8 @@ namespace Clicker.GUI.Pages
         }
         private void NineRefresh()
         {
-            nineProgBar.Value += 200;
-            nineMoneyTxt.Text = (nine.UpgradeCount * nine.DefaultMoney).ToString();
+            if(nine.UpgradeCount > 0)
+                nineProgBar.Value += 200;
 
             if (!(money >= nine.CurrentPrice))
                 nineBuyButton.IsEnabled = false;
@@ -220,8 +220,8 @@ namespace Clicker.GUI.Pages
         }
         private void TenRefresh()
         {
-            tenProgBar.Value += 200;
-            tenMoneyTxt.Text = (ten.UpgradeCount * ten.DefaultMoney).ToString();
+            if(ten.UpgradeCount > 0)
+                tenProgBar.Value += 200;
 
             if (!(money >= ten.CurrentPrice))
                 tenBuyButton.IsEnabled = false;
@@ -407,6 +407,7 @@ namespace Clicker.GUI.Pages
                 two.CurrentPrice *= 1.21;
                 MoneyWriter();
                 ChangeProperties("two");
+                twoMoneyTxt.Text = (two.UpgradeCount * two.DefaultMoney).ToString();
             }
             else
             {

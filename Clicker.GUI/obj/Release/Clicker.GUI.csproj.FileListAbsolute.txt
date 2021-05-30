@@ -43,3 +43,7 @@ C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\Clicker.GUI.pdb
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.DataAccess.dll
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.DataAccess.pdb
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.DataAccess.dll.config
+C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.Business.dll
+C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Release\Clicker.Business.pdb
+C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\Pages\ShopPage.g.cs
+C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Release\Pages\ShopPage.baml

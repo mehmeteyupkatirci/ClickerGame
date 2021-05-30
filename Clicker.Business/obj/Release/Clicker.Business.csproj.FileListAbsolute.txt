@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.Business.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.Business.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.Core.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.DataAccess.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.Entities.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\EntityFramework.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.Core.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.Core.dll.config
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.DataAccess.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.DataAccess.dll.config
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\Clicker.Entities.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Release\EntityFramework.xml
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Release\Clicker.Business.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Release\Clicker.Business.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Release\Clicker.Business.csproj.CopyComplete
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Release\Clicker.Business.dll
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Release\Clicker.Business.pdb
