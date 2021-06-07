@@ -13,6 +13,15 @@
     <Grid Background="#27527B">
         <Button Name="btnFirstPage" Width="150" Height="75" Content="{DynamicResource back2HomePage}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnFirstPage_Click"/>
         <Button Name="btnDeleteAllRecords" Width="150" Height="75" Content="{DynamicResource deleteGame}" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnDeleteAllRecords_Click"/>
-        <Label Content="SETTINGS PAGE" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="60"></Label>
+        <Button Name="btnSoundClose" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnSoundClose_Click">
+            <Button.Content>
+                <Image Height="73" Width="73" Source="../Resources/Icons/sound_on.png"/>
+            </Button.Content>
+        </Button>
+        <Button Name="btnSoundOpen" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnSoundOpen_Click">
+            <Button.Content>
+                <Image Height="73" Width="76" Source="../Resources/Icons/sound_close.png"/>
+            </Button.Content>
+        </Button>
     </Grid>
 </Page>

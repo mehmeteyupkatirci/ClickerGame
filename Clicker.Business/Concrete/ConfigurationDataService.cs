@@ -51,6 +51,7 @@ namespace Clicker.Business.Concrete
             {
                 _configurationDataDal.Add(new ConfigurationData { Key = "firstLoad", Value = "done" });
                 _configurationDataDal.Add(new ConfigurationData { Key = "money", Value = "0" });
+                _configurationDataDal.Add(new ConfigurationData { Key = "sound_effects", Value = "true" });
                 return true;
             }
             else if (isFirstOpen.Value == "deleted")

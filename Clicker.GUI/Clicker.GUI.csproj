@@ -141,6 +141,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Resource Include="Resources\Icons\save.png" />
+    <Resource Include="Resources\Icons\sound_on.png" />
+    <Resource Include="Resources\Icons\sound_close.png" />
     <Content Include="Resources\Sounds\test1.wav" />
     <Resource Include="Resources\Icons\TeamLogos\mercedes.png" />
     <Resource Include="Resources\Icons\TeamLogos\ferrari.png" />
@@ -154,7 +156,7 @@
     <Resource Include="Resources\Icons\TeamLogos\McLaren.png" />
     <Resource Include="Resources\Icons\TeamLogos\redbul.png" />
     <Resource Include="Resources\Icons\icons8-left-arrow-52.png" />
-    <Resource Include="Resources\Icons\icons8-shop-96.png" />
+    <Resource Include="Resources\Icons\shop.png" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -28,12 +28,12 @@
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,10,30,10" HorizontalAlignment="Right" Grid.Column="1">
             <Button Name="btnShopPage" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}"  HorizontalAlignment="Right" Click="btnShopPage_Click">
                 <Button.Content>
-                    <Image Height="61" Width="63" Source="../Resources/Icons/save.png" RenderTransformOrigin="0.516,0.5"/>
+                    <Image Height="43" Width="43" Source="../Resources/Icons/shop.png"/>
                 </Button.Content>
             </Button>
             <Button Name="btnSaveGame" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}"  HorizontalAlignment="Right" Click="btnSaveGame_Click">
                 <Button.Content>
-                    <Image Height="46" Width="46" Source="../Resources/Icons/icons8-shop-96.png"/>
+                    <Image Height="66" Width="64" Source="../Resources/Icons/save.png"/>
                 </Button.Content>
             </Button>
             <Button Name="btnFirstPage" Margin="5,0" Background="Transparent"  BorderThickness="0" ToolTip="{DynamicResource back2HomePage}"  HorizontalAlignment="Right" Click="btnFirstPage_Click">
