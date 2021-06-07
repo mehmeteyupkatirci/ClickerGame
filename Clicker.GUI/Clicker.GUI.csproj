@@ -140,6 +140,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Resource Include="Resources\Icons\save.png" />
+    <Content Include="Resources\Sounds\test1.wav" />
+    <Resource Include="Resources\Icons\TeamLogos\mercedes.png" />
+    <Resource Include="Resources\Icons\TeamLogos\ferrari.png" />
+    <Resource Include="Resources\Icons\TeamLogos\alpha_tauri.png" />
+    <Resource Include="Resources\Icons\TeamLogos\aston_martin.png" />
+    <Resource Include="Resources\Icons\TeamLogos\Alpine.svg.png" />
+    <Resource Include="Resources\Icons\TeamLogos\alfa_romeo.png" />
+    <Resource Include="Resources\Icons\TeamLogos\alfaRomeo.jpg" />
+    <Resource Include="Resources\Icons\TeamLogos\williams.png" />
+    <Resource Include="Resources\Icons\TeamLogos\Haas.png" />
+    <Resource Include="Resources\Icons\TeamLogos\McLaren.png" />
+    <Resource Include="Resources\Icons\TeamLogos\redbul.png" />
     <Resource Include="Resources\Icons\icons8-left-arrow-52.png" />
     <Resource Include="Resources\Icons\icons8-shop-96.png" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -173,9 +186,7 @@
       <Name>Clicker.Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Icons\TeamLogos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -28,6 +28,11 @@
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,10,30,10" HorizontalAlignment="Right" Grid.Column="1">
             <Button Name="btnShopPage" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}"  HorizontalAlignment="Right" Click="btnShopPage_Click">
                 <Button.Content>
+                    <Image Height="61" Width="63" Source="../Resources/Icons/save.png" RenderTransformOrigin="0.516,0.5"/>
+                </Button.Content>
+            </Button>
+            <Button Name="btnSaveGame" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}"  HorizontalAlignment="Right" Click="btnSaveGame_Click">
+                <Button.Content>
                     <Image Height="46" Width="46" Source="../Resources/Icons/icons8-shop-96.png"/>
                 </Button.Content>
             </Button>
@@ -37,18 +42,18 @@
                 </Button.Content>
             </Button>
         </StackPanel>
-        
+
         <!--#region Left-->
 
-        <DockPanel Grid.Row="1" Margin="30,0">
+        <DockPanel Grid.Row="1" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="..\Resources\Icons\TeamLogos\Haas.png"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="..\Resources\Icons\TeamLogos\Haas.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="oneUpgradeCountTxt" Text="ONE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -59,15 +64,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Row="2" Margin="30,0">
+        <DockPanel Grid.Row="2" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="..\Resources\Icons\TeamLogos\williams.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="twoUpgradeCountTxt" Text="TWO" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -78,15 +83,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Row="3" Margin="30,0">
+        <DockPanel Grid.Row="3" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="..\Resources\Icons\TeamLogos\alfa_romeo.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="threeUpgradeCountTxt" Text="THREE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -97,15 +102,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Row="4" Margin="30,0">
+        <DockPanel Grid.Row="4" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="../Resources/Icons/TeamLogos/alpine.svg.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="fourUpgradeCountTxt" Text="FOUR" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -116,15 +121,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Row="5" Margin="30,0">
+        <DockPanel Grid.Row="5" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="..\Resources\Icons\TeamLogos\aston_martin.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="fiveUpgradeCountTxt" Text="FIVE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -138,15 +143,15 @@
         <!--#endregion-->
 
         <!--#region Right-->
-        <DockPanel Grid.Column="1" Grid.Row="1" Margin="30,0">
+        <DockPanel Grid.Column="1" Grid.Row="1" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="../Resources/Icons/TeamLogos/alpha_tauri.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="sixUpgradeCountTxt" Text="SIX" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -157,15 +162,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Column="1" Grid.Row="2" Margin="30,0">
+        <DockPanel Grid.Column="1" Grid.Row="2" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="../Resources/Icons/TeamLogos/McLaren.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="sevenUpgradeCountTxt" Text="SEVEN" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -176,15 +181,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Column="1" Grid.Row="3" Margin="30,0">
+        <DockPanel Grid.Column="1" Grid.Row="3" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="../Resources/Icons/TeamLogos/ferrari.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="eightUpgradeCountTxt" Text="EIGHT" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -195,15 +200,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Column="1" Grid.Row="4" Margin="30,0">
+        <DockPanel Grid.Column="1" Grid.Row="4" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="../Resources/Icons/TeamLogos/redbul.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="nineUpgradeCountTxt" Text="NINE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
@@ -214,15 +219,15 @@
                 </Grid>
             </Border>
         </DockPanel>
-        <DockPanel Grid.Row="5" Grid.Column="1" Margin="30,0">
+        <DockPanel Grid.Row="5" Grid.Column="1" Margin="10,0">
             <Border BorderThickness="0" Height="80">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="65"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,15">
-                        <Image Width="43" Height="43" Source="../Resources/Icons/icons8_user_2.ico"></Image>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <Image Width="63" Height="63" Source="../Resources/Icons/TeamLogos/mercedes.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="tenUpgradeCountTxt" Text="TEN" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>

@@ -384,6 +384,8 @@ namespace Clicker.GUI.Pages
 
         private void oneBuyButton_Click(object sender, RoutedEventArgs e)
         {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\User\source\repos\Clicker\Clicker.GUI\Resources\Sounds\test1.wav");
+            player.Play();
             if (money >= one.CurrentPrice)
             {
                 one.UpgradeCount += 1;
@@ -660,6 +662,11 @@ namespace Clicker.GUI.Pages
             tenBuyButton.Content = $"${Math.Round(ten.CurrentPrice, 1)} {Resources["buy"]}";
             tenProgBar.Maximum = ten.TimeMs * 1000;
             tenDurationTxt.Text = $"{ten.TimeMs} {Resources["shortSecond"]}";
+        }
+
+        private void btnSaveGame_Click(object sender, RoutedEventArgs e)
+        {
+            SetGameFromDb();
         }
 
         private void ChangePropNine()

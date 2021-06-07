@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/sounds/test1.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("idle_clicker.db")]
 
 
