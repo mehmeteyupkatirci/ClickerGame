@@ -52,7 +52,21 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button IsEnabled="false" Name="btnOneMenajer" Click="btnOneMenajer_Click" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" />
+                    <DockPanel Grid.Row="0" Margin="10,0">
+                        <Border BorderThickness="0" Height="80">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="87" Height="95" Source="..\Resources\Icons\Ceo\günther.jpg"/>
+                                </StackPanel>
+                                <Button Name="btnOneMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1" Margin="17,0,0,30" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="btnOneMenajer_Click"/>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <!--<Button IsEnabled="false" Name="btnOneMenajer" Click="btnOneMenajer_Click" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" />-->
                     <Button IsEnabled="false" Name="btnTwoMenajer" Click="btnTwoMenajer_Click" Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
                     <Button IsEnabled="false" Name="btnTreeMenajer" Click="btnTreeMenajer_Click" Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
                     <Button IsEnabled="false" Name="btnFourMenajer" Click="btnFourMenajer_Click" Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>

@@ -271,6 +271,11 @@ namespace Clicker.GUI.Pages
             BuyEvent();
         }
 
+        private void oneBuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void btnEightTime_Click(object sender, RoutedEventArgs e)
         {
             money -= eight.TimeCost;
