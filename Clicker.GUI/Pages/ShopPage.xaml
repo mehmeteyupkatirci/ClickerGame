@@ -53,16 +53,22 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <DockPanel Grid.Row="0" Margin="10,0">
-                        <Border BorderThickness="0" Height="80">
+                        <Border BorderThickness="0" Height="auto">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="0.35*"/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
+                                <!--<Ellipse Height="auto" Width="Auto" Margin="10">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="..\Resources\Icons\Ceo\günther.jpg"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>-->
+                                <TextBlock Name="oneDurationTxt" Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="GÜNTHER STEINER" FontSize="18"/>
                                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
-                                    <Image Width="87" Height="95" Source="..\Resources\Icons\Ceo\günther.jpg"/>
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\günther.jpg"/>
                                 </StackPanel>
-                                <Button Name="btnOneMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1" Margin="17,0,0,30" Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="btnOneMenajer_Click"/>
+                                <Button Name="btnOneMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOneMenajer_Click"/>
                             </Grid>
                         </Border>
                     </DockPanel>

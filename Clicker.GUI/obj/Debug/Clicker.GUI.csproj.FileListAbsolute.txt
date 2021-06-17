@@ -1,4 +1,3 @@
-C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Clicker.GUI.csprojAssemblyReference.cache
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\MainWindow.g.cs
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\App.g.cs
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Clicker.GUI_MarkupCompile.cache
@@ -47,3 +46,4 @@ C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Business.dll
 C:\Users\User\source\repos\Clicker\Clicker.GUI\bin\Debug\Clicker.Business.pdb
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Pages\ShopPage.g.cs
 C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Pages\ShopPage.baml
+C:\Users\User\source\repos\Clicker\Clicker.GUI\obj\Debug\Clicker.GUI.csproj.AssemblyReference.cache

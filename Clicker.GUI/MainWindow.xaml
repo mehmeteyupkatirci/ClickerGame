@@ -26,7 +26,7 @@
             <TextBlock Text="{DynamicResource appFullName}" FontSize="13" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
         </StackPanel>
         <StackPanel Name="MyTitleBar" VerticalAlignment="Top" MouseDown="MyTitleBar_MouseDown">
-            <Border Background="#240246" Height="30">
+            <Border Background="#C6C6C6" Height="30">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Name="btnMin" Content="—" Margin="0,-2,0,0" VerticalContentAlignment="Top" FontWeight="Bold" Click="btnMin_Click" Style="{StaticResource TitleButton}" Width="40" ></Button>
                     <Button Name="btnNormal" Content="❐" Margin="0,-2,0,0" VerticalContentAlignment="Top" Click="btnNormal_Click" Style="{StaticResource TitleButton}" Width="40" ></Button>

@@ -144,6 +144,9 @@
     <Resource Include="Resources\Icons\sound_on.png" />
     <Resource Include="Resources\Icons\sound_close.png" />
     <Resource Include="Resources\Icons\Ceo\günther.jpg" />
+    <Resource Include="Resources\Backgrounds\image.jpg" />
+    <Resource Include="Resources\Backgrounds\redbull.jpg" />
+    <Resource Include="Resources\Icons\f1.png" />
     <Content Include="Resources\Sounds\test1.wav" />
     <Resource Include="Resources\Icons\TeamLogos\mercedes.png" />
     <Resource Include="Resources\Icons\TeamLogos\ferrari.png" />

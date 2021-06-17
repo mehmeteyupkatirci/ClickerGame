@@ -11,10 +11,28 @@
         <ResourceDictionary Source="../Resources/Lang/string_tr.xaml"/>
     </Page.Resources>
 
-    <Grid Background="#240246">
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Name="btnPlay" Click="btnPlay_Click" Content="{DynamicResource play}" Height="36" Width="176" Margin="20"/>
-            <Button Name="btnSettings" Click="btnSettings_Click" Content="{DynamicResource settings}" Height="36" Width="176" Margin="20"/>
-        </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="..\Resources\Backgrounds\redbull.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DockPanel Grid.Column="1" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Row="0">
+                    <Image Width="200" Height="200" Source="..\Resources\Icons\f1.png"></Image>
+                </DockPanel>
+                <StackPanel VerticalAlignment="Center" Grid.Row="1" Orientation="Vertical" Margin="0,0,0,90">
+                    <Button Style="{StaticResource HomePageButtons}" Background="Transparent" FontWeight="Bold" BorderThickness="0" Margin="0,0,0,40" FontSize="25" Name="btnPlay" Click="btnPlay_Click" Content="{DynamicResource play}" Height="36" Width="176" FontFamily="Leelawadee UI Semilight"/>
+                    <Button Style="{StaticResource HomePageButtons}" Background="Transparent" FontWeight="Bold" FontFamily="Leelawadee UI Semilight" BorderThickness="0" FontSize="25" Name="btnSettings" Click="btnSettings_Click" Content="{DynamicResource settings}" Height="36" Width="176"/>
+                </StackPanel>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Page>

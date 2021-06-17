@@ -31,6 +31,7 @@
                     <Image Height="43" Width="43" Source="../Resources/Icons/shop.png"/>
                 </Button.Content>
             </Button>
+            <!--TODO: Save butonunun tooltip'i ingilizce olacak.-->
             <Button Name="btnSaveGame" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}"  HorizontalAlignment="Right" Click="btnSaveGame_Click">
                 <Button.Content>
                     <Image Height="66" Width="64" Source="../Resources/Icons/save.png"/>
