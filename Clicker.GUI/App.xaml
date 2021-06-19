@@ -113,10 +113,6 @@
                                 <Setter TargetName="Border" Property="Background" Value="#EE0000"/>
                                 <Setter Property="Foreground" Value="White" />
                             </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#27527B"/>
-                                <Setter Property="Foreground" Value="#FF4D4D4D" />
-                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>

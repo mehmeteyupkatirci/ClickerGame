@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Clicker.GUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1300"
       Title="ShopPage">
     <Page.Resources>
         <ResourceDictionary Source="../Resources/Lang/string_tr.xaml"/>
@@ -30,13 +30,6 @@
             <TabItem Width="265" Height="30">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Height="25" Width="38" Margin="-3,0,0,0">
-                            <Image.Style>
-                                <Style TargetType="Image">
-                                    <Setter Property="Source" Value="Resources\Icon\icons8_create_2.ico" />
-                                </Style>
-                            </Image.Style>
-                        </Image>-->
                         <TextBlock Text="MENAJER"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -52,48 +45,229 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
+                    
+                    <!--#region Menajer 1.Satır-->
                     <DockPanel Grid.Row="0" Margin="10,0">
                         <Border BorderThickness="0" Height="auto">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.35*"/>
+                                    <ColumnDefinition Width="0.45*"/>
                                     <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
                                 </Grid.ColumnDefinitions>
-                                <!--<Ellipse Height="auto" Width="Auto" Margin="10">
-                                    <Ellipse.Fill>
-                                        <ImageBrush ImageSource="..\Resources\Icons\Ceo\günther.jpg"/>
-                                    </Ellipse.Fill>
-                                </Ellipse>-->
-                                <TextBlock Name="oneDurationTxt" Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="GÜNTHER STEINER" FontSize="18"/>
                                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
-                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\günther.jpg"/>
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\günther.png"/>
                                 </StackPanel>
-                                <Button Name="btnOneMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOneMenajer_Click"/>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Günther Steiner" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnOneMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOneMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\Haas.png"/>
+                                </StackPanel>
                             </Grid>
                         </Border>
                     </DockPanel>
-                    <!--<Button IsEnabled="false" Name="btnOneMenajer" Click="btnOneMenajer_Click" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" />-->
-                    <Button IsEnabled="false" Name="btnTwoMenajer" Click="btnTwoMenajer_Click" Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Name="btnTreeMenajer" Click="btnTreeMenajer_Click" Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Name="btnFourMenajer" Click="btnFourMenajer_Click" Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Name="btnFiveMenajer" Click="btnFiveMenajer_Click" Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Name="btnSixMenajer" Click="btnSixMenajer_Click" Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Name="btnSevenMenajer" Click="btnSevenMenajer_Click" Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Name="btnEightMenajer" Click="btnEightMenajer_Click" Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Name="btnNineMenajer" Click="btnNineMenajer_Click" Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Name="btnTenMenajer" Click="btnTenMenajer_Click" Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+                    <DockPanel Grid.Row="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\simon2.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Simon Roberts" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnTwoMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTwoMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\williams.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="2" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\frederic.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Frederic Vasseur" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnTreeMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTreeMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\alfa_romeo.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\cyril.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Cyril Abiteboul" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnFourMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnFourMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\alpine.svg.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="4" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\lawrence.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Lawrence Stroll" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnFiveMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnFiveMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\aston_martin.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <!--#endregion-->
+                    
+                    <!--#region Menajer 2.Satır-->
+
+                    <DockPanel Grid.Row="0" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\graham.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Graham Watson" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnSixMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSixMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\alpha_tauri.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="1" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\zak.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Zak Brown" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnSevenMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSevenMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\mcLaren.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="2" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\mattia.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Mattia Binotto" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnEightMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnEightMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\ferrari.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\christianHorner.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Christian Horner" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnNineMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnNineMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\redbul.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="4" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Ceo\toto3.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Toto Wolff" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnTenMenajer" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTenMenajer_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\mercedes.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <!--#endregion-->
+                    
                 </Grid>
             </TabItem>
             <TabItem Width="265" Height="30">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Height="25" Width="38" Margin="-3,0,0,0">
-                            <Image.Style>
-                                <Style TargetType="Image">
-                                    <Setter Property="Source" Value="Resources\Icon\icons8_create_2.ico" />
-                                </Style>
-                            </Image.Style>
-                        </Image>-->
                         <TextBlock Text="2X KAZANÇ"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -109,28 +283,228 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button IsEnabled="false" Click="btnOnePrice_Click" Name="btnOnePrice" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Click="btnTwoPrice_Click" Name="btnTwoPrice" Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Click="btnTreePrice_Click" Name="btnTreePrice" Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Click="btnFourPrice_Click" Name="btnFourPrice" Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Click="btnFivePrice_Click" Name="btnFivePrice" Content="SATIN AL 5" Grid.Row="4" Grid.Column="0" ></Button>
-                    <Button IsEnabled="false" Click="btnSixPrice_Click" Name="btnSixPrice" Content="SATIN AL 6" Grid.Row="0" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Click="btnSevenPrice_Click" Name="btnSevenPrice" Content="SATIN AL 7" Grid.Row="1" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Click="btnEightPrice_Click" Name="btnEightPrice" Content="SATIN AL 8" Grid.Row="2" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Click="btnNinePrice_Click" Name="btnNinePrice" Content="SATIN AL 9" Grid.Row="3" Grid.Column="1" ></Button>
-                    <Button IsEnabled="false" Click="btnTenPrice_Click" Name="btnTenPrice" Content="SATIN AL 10" Grid.Row="4" Grid.Column="1" ></Button>
+
+                    <!--#region Kazanç 1.Satır-->
+                    <DockPanel Grid.Row="0" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\haasUral.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Uralkali" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnOnePrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOnePrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\Haas.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\sofinaFood.jpg"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Sofina Food" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnTwoPrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTwoPrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\williams.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="2" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\alfaOrlen.svg.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Orlen" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnTreePrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTreePrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\alfa_romeo.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\alpineCastrol.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Orlen" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnFourPrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnFourPrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\alpine.svg.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="4" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\astonMCogniz.jpg"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Cognizant" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnFivePrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnFivePrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\aston_martin.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <!--#endregion-->
+
+                    <!--#region Kazanç 2.Satır-->
+                    <DockPanel Grid.Row="0" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\alphaTaCasio.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Casio" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnSixPrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSixPrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\alpha_tauri.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="1" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\bitciMclaren.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Bitci.com" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnSevenPrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSevenPrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\mclaren.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="2" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\ferrariRayban.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Ray-ban" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnEightPrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnEightPrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\ferrari.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\redbullMobil1.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Mobil 1" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnNinePrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnNinePrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\redbul.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <DockPanel Grid.Row="4" Grid.Column="1" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\mercedesPetronas.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Petronas" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnTenPrice" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTenPrice_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\mercedes.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <!--#endregion-->
+                    
                 </Grid>
             </TabItem>
             <TabItem Width="265" Height="30">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Height="25" Width="38" Margin="-3,0,0,0">
-                            <Image.Style>
-                                <Style TargetType="Image">
-                                    <Setter Property="Source" Value="Resources\Icon\icons8_create_2.ico" />
-                                </Style>
-                            </Image.Style>
-                        </Image>-->
                         <TextBlock Text="2X SÜRE"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -146,7 +520,34 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button IsEnabled="false" Click="btnOneTime_Click" Name="btnOneTime" Content="SATIN AL 1" Grid.Row="0" Grid.Column="0" ></Button>
+                    <!--#region Süre 1.Satır-->
+                    <DockPanel Grid.Row="0" Margin="10,0">
+                        <Border BorderThickness="0" Height="auto">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.45*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.35*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                                    <Image Width="Auto" Source="..\Resources\Icons\Sponsors\alphaTaCasio.png"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Foreground="Red" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" Text="Casio" Margin="0,0,0,20" FontSize="18"/>
+                                    <Button Name="btnOneTime" BorderThickness="0" Foreground="#F2F2F2" Background="#411D62" FontWeight="Bold" FontSize="16" Grid.Column="1"  Height="30" Width="250" Content="{DynamicResource buy}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOneTime_Click"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Column="2">
+                                    <Image Width="93" Height="93" Source="..\Resources\Icons\TeamLogos\haas.png"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    <!--#endregion-->
+                    
+                    <!--#region Süre 2.Satır-->
+                    
+                    <!--#endregion-->
+                    
                     <Button IsEnabled="false" Click="btnTwoTime_Click" Name="btnTwoTime" Content="SATIN AL 2" Grid.Row="1" Grid.Column="0" ></Button>
                     <Button IsEnabled="false" Click="btnTreeTime_Click" Name="btnTreeTime" Content="SATIN AL 3" Grid.Row="2" Grid.Column="0" ></Button>
                     <Button IsEnabled="false" Click="btnFourTime_Click" Name="btnFourTime" Content="SATIN AL 4" Grid.Row="3" Grid.Column="0" ></Button>

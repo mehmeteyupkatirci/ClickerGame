@@ -10,6 +10,7 @@
         MinWidth="950"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+    <!--WindowState="Maximized"-->
     <Window.Resources>
         <ResourceDictionary Source="Resources\Lang\string_tr.xaml"/>
     </Window.Resources>

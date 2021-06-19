@@ -10,18 +10,40 @@
     <Page.Resources>
         <ResourceDictionary Source="../Resources/Lang/string_tr.xaml"/>
     </Page.Resources>
-    <Grid Background="#27527B">
-        <Button Name="btnFirstPage" Width="150" Height="75" Content="{DynamicResource back2HomePage}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnFirstPage_Click"/>
-        <Button Name="btnDeleteAllRecords" Width="150" Height="75" Content="{DynamicResource deleteGame}" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnDeleteAllRecords_Click"/>
-        <Button Name="btnSoundClose" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnSoundClose_Click">
-            <Button.Content>
-                <Image Height="73" Width="73" Source="../Resources/Icons/sound_on.png"/>
-            </Button.Content>
-        </Button>
-        <Button Name="btnSoundOpen" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnSoundOpen_Click">
-            <Button.Content>
-                <Image Height="73" Width="76" Source="../Resources/Icons/sound_close.png"/>
-            </Button.Content>
-        </Button>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="..\Resources\Backgrounds\settingsPage.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <StackPanel Grid.Column="1" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Row="0">
+                    <Image Width="200" Height="200" Source="..\Resources\Icons\f1.png"></Image>
+                </DockPanel>
+                <StackPanel VerticalAlignment="Center" Grid.Row="1" Orientation="Vertical" Margin="0,40,0,40">
+                    <Button Style="{StaticResource HomePageButtons}" Name="btnFirstPage" Height="36" Width="176" Content="{DynamicResource back2HomePage}" Margin="0,0,0,40" Click="btnFirstPage_Click" FontFamily="Leelawadee UI Semilight" FontSize="25"/>
+                    <Button Style="{StaticResource HomePageButtons}" Name="btnDeleteAllRecords" Height="36" Width="176" Content="{DynamicResource deleteGame}" Click="btnDeleteAllRecords_Click" FontFamily="Leelawadee UI Semilight" FontSize="25"/>
+                </StackPanel>
+                <Button Grid.Row="2" Name="btnSoundClose" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnSoundClose_Click">
+                        <Button.Content>
+                            <Image Height="63" Width="63" Source="..\Resources\Icons\sound-on.png"/>
+                        </Button.Content>
+                    </Button>
+                <Button Grid.Row="2" Name="btnSoundOpen" Margin="5,0" Background="Transparent" BorderThickness="0" ToolTip="{DynamicResource go2shop}" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnSoundOpen_Click">
+                    <Button.Content>
+                        <Image Height="73" Width="76" Source="../Resources/Icons/sound_close.png"/>
+                    </Button.Content>
+                </Button>
+            </Grid>
+        </StackPanel>
+     
     </Grid>
 </Page>

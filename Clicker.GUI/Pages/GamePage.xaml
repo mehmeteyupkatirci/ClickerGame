@@ -209,7 +209,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
-                        <Image Width="63" Height="63" Source="../Resources/Icons/TeamLogos/redbul.png"></Image>
+                        <Image Width="67" Height="67" Source="../Resources/Icons/TeamLogos/redbul.png"></Image>
                     </StackPanel>
 
                     <TextBlock Name="nineUpgradeCountTxt" Text="NINE" Foreground="#F2F2F2" VerticalAlignment="Bottom" Margin="0,0,0,5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>

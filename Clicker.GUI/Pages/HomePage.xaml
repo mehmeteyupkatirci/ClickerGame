@@ -29,8 +29,8 @@
                     <Image Width="200" Height="200" Source="..\Resources\Icons\f1.png"></Image>
                 </DockPanel>
                 <StackPanel VerticalAlignment="Center" Grid.Row="1" Orientation="Vertical" Margin="0,0,0,90">
-                    <Button Style="{StaticResource HomePageButtons}" Background="Transparent" FontWeight="Bold" BorderThickness="0" Margin="0,0,0,40" FontSize="25" Name="btnPlay" Click="btnPlay_Click" Content="{DynamicResource play}" Height="36" Width="176" FontFamily="Leelawadee UI Semilight"/>
-                    <Button Style="{StaticResource HomePageButtons}" Background="Transparent" FontWeight="Bold" FontFamily="Leelawadee UI Semilight" BorderThickness="0" FontSize="25" Name="btnSettings" Click="btnSettings_Click" Content="{DynamicResource settings}" Height="36" Width="176"/>
+                    <Button Style="{StaticResource HomePageButtons}" Margin="0,0,0,40" FontSize="25" Name="btnPlay" Click="btnPlay_Click" Content="{DynamicResource play}" Height="36" Width="176" FontFamily="Leelawadee UI Semilight"/>
+                    <Button Style="{StaticResource HomePageButtons}" FontWeight="Bold" FontFamily="Leelawadee UI Semilight" FontSize="25" Name="btnSettings" Click="btnSettings_Click" Content="{DynamicResource settings}" Height="36" Width="176"/>
                 </StackPanel>
             </Grid>
         </DockPanel>

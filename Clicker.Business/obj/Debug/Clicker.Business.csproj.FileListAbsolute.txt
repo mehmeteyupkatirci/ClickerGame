@@ -1,4 +1,3 @@
-C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.csprojAssemblyReference.cache
 C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Business.dll
 C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\Clicker.Business.pdb
@@ -15,3 +14,4 @@ C:\Users\User\source\repos\Clicker\Clicker.Business\bin\Debug\EntityFramework.xm
 C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.csproj.CopyComplete
 C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.dll
 C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.pdb
+C:\Users\User\source\repos\Clicker\Clicker.Business\obj\Debug\Clicker.Business.csproj.AssemblyReference.cache

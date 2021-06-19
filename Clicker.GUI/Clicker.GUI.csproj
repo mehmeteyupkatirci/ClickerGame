@@ -141,12 +141,33 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Resource Include="Resources\Icons\save.png" />
-    <Resource Include="Resources\Icons\sound_on.png" />
     <Resource Include="Resources\Icons\sound_close.png" />
-    <Resource Include="Resources\Icons\Ceo\günther.jpg" />
     <Resource Include="Resources\Backgrounds\image.jpg" />
     <Resource Include="Resources\Backgrounds\redbull.jpg" />
     <Resource Include="Resources\Icons\f1.png" />
+    <Resource Include="Resources\Backgrounds\settingsPage.jpg" />
+    <Resource Include="Resources\Icons\sound-on.png" />
+    <Resource Include="Resources\Icons\Ceo\christianHorner.png" />
+    <Resource Include="Resources\Icons\Ceo\Zak.png" />
+    <Resource Include="Resources\Icons\Ceo\lawrence.png" />
+    <Resource Include="Resources\Icons\Ceo\Mattia.png" />
+    <Resource Include="Resources\Icons\Ceo\cyril.png" />
+    <Resource Include="Resources\Icons\Ceo\frederic.png" />
+    <Resource Include="Resources\Icons\Ceo\simon2.png" />
+    <Resource Include="Resources\Icons\Ceo\toto3.png" />
+    <Resource Include="Resources\Icons\Ceo\günther.png" />
+    <Resource Include="Resources\Icons\Ceo\graham.png" />
+    <Resource Include="Resources\Icons\TeamLogos\redbul.png" />
+    <Resource Include="Resources\Icons\Sponsors\haasUral.png" />
+    <Resource Include="Resources\Icons\Sponsors\alfaOrlen.svg.png" />
+    <Resource Include="Resources\Icons\Sponsors\alphaTaCasio.png" />
+    <Resource Include="Resources\Icons\Sponsors\alpinecastrol.png" />
+    <Resource Include="Resources\Icons\Sponsors\astonMCogniz.jpg" />
+    <Resource Include="Resources\Icons\Sponsors\bitciMclaren.png" />
+    <Resource Include="Resources\Icons\Sponsors\ferrariRayban.png" />
+    <Resource Include="Resources\Icons\Sponsors\mercedespetronas.png" />
+    <Resource Include="Resources\Icons\Sponsors\redbullMobil1.png" />
+    <Resource Include="Resources\Icons\Sponsors\sofinaFood.jpg" />
     <Content Include="Resources\Sounds\test1.wav" />
     <Resource Include="Resources\Icons\TeamLogos\mercedes.png" />
     <Resource Include="Resources\Icons\TeamLogos\ferrari.png" />
@@ -154,11 +175,9 @@
     <Resource Include="Resources\Icons\TeamLogos\aston_martin.png" />
     <Resource Include="Resources\Icons\TeamLogos\Alpine.svg.png" />
     <Resource Include="Resources\Icons\TeamLogos\alfa_romeo.png" />
-    <Resource Include="Resources\Icons\TeamLogos\alfaRomeo.jpg" />
     <Resource Include="Resources\Icons\TeamLogos\williams.png" />
     <Resource Include="Resources\Icons\TeamLogos\Haas.png" />
     <Resource Include="Resources\Icons\TeamLogos\McLaren.png" />
-    <Resource Include="Resources\Icons\TeamLogos\redbul.png" />
     <Resource Include="Resources\Icons\icons8-left-arrow-52.png" />
     <Resource Include="Resources\Icons\shop.png" />
     <EmbeddedResource Include="Properties\Resources.resx">
