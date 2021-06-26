@@ -168,6 +168,16 @@
     <Resource Include="Resources\Icons\Sponsors\mercedespetronas.png" />
     <Resource Include="Resources\Icons\Sponsors\redbullMobil1.png" />
     <Resource Include="Resources\Icons\Sponsors\sofinaFood.jpg" />
+    <Resource Include="Resources\Icons\CarTools\beyazLastik.png" />
+    <Resource Include="Resources\Icons\CarTools\direksiyon.png" />
+    <Resource Include="Resources\Icons\CarTools\havalandirma.png" />
+    <Resource Include="Resources\Icons\CarTools\kirmiziLastik.png" />
+    <Resource Include="Resources\Icons\CarTools\maviLastik.png" />
+    <Resource Include="Resources\Icons\CarTools\motor.png" />
+    <Resource Include="Resources\Icons\CarTools\onKanat.png" />
+    <Resource Include="Resources\Icons\CarTools\sariLastik.png" />
+    <Resource Include="Resources\Icons\CarTools\yesilLastik.png" />
+    <Resource Include="Resources\Icons\CarTools\arkaKanat2.png" />
     <Content Include="Resources\Sounds\test1.wav" />
     <Resource Include="Resources\Icons\TeamLogos\mercedes.png" />
     <Resource Include="Resources\Icons\TeamLogos\ferrari.png" />
